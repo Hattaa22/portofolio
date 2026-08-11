@@ -227,10 +227,10 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
                         }
                     },
                     boxShadow: {
-                        glass: '0 20px 40px rgba(12, 18, 29, .25)',
-                        card: '0 12px 30px rgba(12, 18, 29, .18)',
-                        glow: '0 0 30px rgba(180, 195, 212, .3)',
-                        hoverCard: '0 20px 40px rgba(12, 18, 29, .28)'
+                        glass: '0 20px 40px rgba(12, 18, 29, .2)',
+                        card: '0 12px 30px rgba(12, 18, 29, .15)',
+                        glow: '0 0 30px rgba(255, 255, 255, .35)',
+                        hoverCard: '0 20px 40px rgba(12, 18, 29, .22)'
                     }
                 }
             }
@@ -243,11 +243,11 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
         body {
             font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             background:
-                radial-gradient(circle at 10% 10%, rgba(208, 219, 231, .6), transparent 32rem),
-                radial-gradient(circle at 90% 90%, rgba(86, 104, 126, .45), transparent 36rem),
-                linear-gradient(135deg, #d8e2ec 0%, #b0c0d2 25%, #7e91a7 55%, #4f6176 80%, #2a3748 100%);
+                radial-gradient(circle at 10% 10%, rgba(226, 237, 245, .7), transparent 32rem),
+                radial-gradient(circle at 90% 90%, rgba(115, 134, 156, .5), transparent 36rem),
+                linear-gradient(135deg, #e0e8f2 0%, #b8c8da 25%, #8aa0b8 55%, #5c7088 80%, #344458 100%);
             background-attachment: fixed;
-            color: #0c121d;
+            color: #090e17;
             overflow-x: hidden;
         }
         .page-section {
@@ -276,10 +276,10 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
             background: transparent;
         }
         .accent-line {
-            background: linear-gradient(90deg, #d0dbe7, #73869c, #17212f, #73869c, #d0dbe7);
+            background: linear-gradient(90deg, #e6edf5, #94a5ba, #283445, #94a5ba, #e6edf5);
         }
         .name-text {
-            background: linear-gradient(135deg, #0c121d 0%, #283445 50%, #4e5f76 100%);
+            background: linear-gradient(135deg, #090e17 0%, #1e293b 50%, #3e4d60 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
