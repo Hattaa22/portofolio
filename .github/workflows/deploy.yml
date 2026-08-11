@@ -3,6 +3,10 @@ name: Build and Deploy PHP site to GitHub Pages
 on:
   push:
     branches: [ "main" ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build-and-deploy:
@@ -19,27 +23,25 @@ jobs:
 
       - name: Start PHP built-in server
         run: |
-          php -S 127.0.0.1:8000 -t . >/dev/null 2>&1 &
+          php -S 127.0.0.1:8000 index.php >/dev/null 2>&1 &
           sleep 2
 
-      - name: Crawl site to static files with wget
+      - name: Crawl site to static HTML with wget
         run: |
           sudo apt-get update
           sudo apt-get install -y wget
+          mkdir -p ./out
           wget --mirror --convert-links --adjust-extension --page-requisites --no-parent -e robots=off http://127.0.0.1:8000/ -P ./out
-          # If wget nests files under host dir, move them up
           if [ -d ./out/127.0.0.1:8000 ]; then
             shopt -s dotglob || true
-            mv ./out/127.0.0.1:8000/* ./out/ || true
+            cp -r ./out/127.0.0.1:8000/* ./out/ || true
             rm -rf ./out/127.0.0.1:8000 || true
           fi
-
-      - name: Clean PHP files from output (safety)
-        run: |
-          find out -name '*.php' -type f -delete || true
+          touch ./out/.nojekyll
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
+

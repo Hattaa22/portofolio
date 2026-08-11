@@ -11,9 +11,9 @@ $profile = [
     'phone_raw' => '085815707390',
     'whatsapp' => 'https://wa.me/6285815707390',
     'stats' => [
-        ['value' => '9', 'label' => 'Project portofolio', 'icon' => 'folder-kanban', 'color' => 'text-zinc-800', 'bg' => 'bg-zinc-200'],
-        ['value' => '11', 'label' => 'Skill teknis', 'icon' => 'badge-check', 'color' => 'text-neutral-800', 'bg' => 'bg-neutral-200'],
-        ['value' => '2026', 'label' => 'Portofolio terbaru', 'icon' => 'sparkles', 'color' => 'text-red-800', 'bg' => 'bg-red-100']
+        ['value' => '8', 'label' => 'Project portofolio', 'icon' => 'folder-kanban', 'color' => 'text-slate-900', 'bg' => 'bg-slate-200/80'],
+        ['value' => '11', 'label' => 'Skill teknis', 'icon' => 'badge-check', 'color' => 'text-slate-800', 'bg' => 'bg-slate-200/80'],
+        ['value' => '2026', 'label' => 'Portofolio terbaru', 'icon' => 'sparkles', 'color' => 'text-slate-900', 'bg' => 'bg-slate-300/80']
     ],
     'education' => [
         ['school' => 'Politeknik Negeri Malang', 'period' => '2022 - Sekarang', 'major' => 'D4 Sistem Informasi Bisnis'],
@@ -86,21 +86,21 @@ $profile = [
             'link' => ''
         ],
         [
-            'title' => 'My Depo',
+            'title' => 'Depo Fluks (My Depo)',
             'type' => 'Progressive Web App',
             'role' => 'Full Stack Developer',
-            'desc' => 'PWA untuk operasional depo air minum, mencakup pelanggan, transaksi, pemesanan air, monitoring stok, dan laporan penjualan real-time.',
-            'contribution' => 'Mengembangkan PWA menggunakan PHP Native dan JSON agar ringan, responsif, dan praktis digunakan di mobile maupun desktop.',
-            'stack' => ['PWA', 'PHP Native', 'JSON', 'Business'],
+            'desc' => 'PWA & Website bisnis operasional depo air minum, mencakup pengelolaan pelanggan, transaksi, pemesanan air, monitoring stok, dan laporan penjualan real-time.',
+            'contribution' => 'Mengembangkan PWA dan website bisnis menggunakan PHP Native dan JSON agar ringan, responsif, dan praktis digunakan di mobile maupun desktop.',
+            'stack' => ['PWA', 'PHP Native', 'JSON', 'Water Business'],
             'icon' => 'glass-water',
             'accent' => 'cyan',
             'images' => [
-                ['src' => 'assets/projects/mydepo-login.png', 'alt' => 'Tampilan pilihan login My Depo'],
-                ['src' => 'assets/projects/mydepo-admin.png', 'alt' => 'Dashboard admin My Depo'],
-                ['src' => 'assets/projects/mydepo-manager.png', 'alt' => 'Dashboard manajer My Depo'],
-                ['src' => 'assets/projects/mydepo-crew.png', 'alt' => 'Dashboard crew My Depo']
+                ['src' => 'assets/projects/mydepo-login.png', 'alt' => 'Tampilan pilihan login Depo Fluks / My Depo'],
+                ['src' => 'assets/projects/mydepo-admin.png', 'alt' => 'Dashboard admin Depo Fluks / My Depo'],
+                ['src' => 'assets/projects/mydepo-manager.png', 'alt' => 'Dashboard manajer Depo Fluks / My Depo'],
+                ['src' => 'assets/projects/mydepo-crew.png', 'alt' => 'Dashboard crew Depo Fluks / My Depo']
             ],
-            'link' => ''
+            'link' => 'https://depo.flukswater.com/'
         ],
         [
             'title' => 'Solusie',
@@ -146,20 +146,6 @@ $profile = [
                 ['src' => 'assets/projects/rsgc-services.png', 'alt' => 'Halaman layanan RS Galery Candra']
             ],
             'link' => 'https://rumahsakitgalericandra.com/'
-        ],
-        [
-            'title' => 'Depo Fluks',
-            'type' => 'Website Business',
-            'role' => 'Full Stack Developer',
-            'desc' => 'Website bisnis air yang menampilkan informasi produk dan layanan secara jelas untuk calon pelanggan.',
-            'contribution' => 'Membangun tampilan website bisnis yang rapi, mudah dipahami, dan siap diakses publik.',
-            'stack' => ['Website', 'Water', 'Business', 'Responsive'],
-            'icon' => 'droplets',
-            'accent' => 'teal',
-            'images' => [
-                ['src' => 'assets/projects/mydepo-login.png', 'alt' => 'Tampilan aplikasi Depo Fluks']
-            ],
-            'link' => 'https://depo.flukswater.com/'
         ]
     ],
     'services' => [
@@ -191,15 +177,15 @@ function brandIcon($icon, $class = 'h-5 w-5') {
 
 function projectAccent($accent) {
     $accents = [
-        'sky' => ['bg' => 'bg-zinc-100', 'text' => 'text-zinc-800', 'border' => 'border-zinc-300', 'bar' => 'from-zinc-800 to-zinc-500'],
-        'violet' => ['bg' => 'bg-neutral-100', 'text' => 'text-neutral-800', 'border' => 'border-neutral-300', 'bar' => 'from-neutral-800 to-stone-500'],
-        'emerald' => ['bg' => 'bg-stone-100', 'text' => 'text-stone-800', 'border' => 'border-stone-300', 'bar' => 'from-stone-800 to-zinc-500'],
-        'amber' => ['bg' => 'bg-red-50', 'text' => 'text-red-800', 'border' => 'border-red-200', 'bar' => 'from-zinc-800 to-red-700'],
-        'cyan' => ['bg' => 'bg-zinc-100', 'text' => 'text-zinc-800', 'border' => 'border-zinc-300', 'bar' => 'from-zinc-700 to-neutral-500'],
-        'rose' => ['bg' => 'bg-red-50', 'text' => 'text-red-800', 'border' => 'border-red-200', 'bar' => 'from-red-900 to-zinc-600'],
-        'slate' => ['bg' => 'bg-stone-100', 'text' => 'text-stone-800', 'border' => 'border-stone-300', 'bar' => 'from-stone-800 to-neutral-500'],
-        'blue' => ['bg' => 'bg-zinc-100', 'text' => 'text-zinc-800', 'border' => 'border-zinc-300', 'bar' => 'from-zinc-800 to-stone-500'],
-        'teal' => ['bg' => 'bg-neutral-100', 'text' => 'text-neutral-800', 'border' => 'border-neutral-300', 'bar' => 'from-neutral-800 to-zinc-500']
+        'sky' => ['bg' => 'bg-slate-900/90', 'text' => 'text-slate-200', 'border' => 'border-slate-700/80', 'bar' => 'from-slate-950 via-slate-900 to-slate-800'],
+        'violet' => ['bg' => 'bg-slate-900/90', 'text' => 'text-slate-200', 'border' => 'border-slate-700/80', 'bar' => 'from-slate-950 via-slate-900 to-slate-800'],
+        'emerald' => ['bg' => 'bg-slate-900/90', 'text' => 'text-slate-200', 'border' => 'border-slate-700/80', 'bar' => 'from-slate-950 via-slate-900 to-slate-800'],
+        'amber' => ['bg' => 'bg-slate-900/90', 'text' => 'text-slate-200', 'border' => 'border-slate-700/80', 'bar' => 'from-slate-950 via-slate-900 to-slate-800'],
+        'cyan' => ['bg' => 'bg-slate-900/90', 'text' => 'text-slate-200', 'border' => 'border-slate-700/80', 'bar' => 'from-slate-950 via-slate-900 to-slate-800'],
+        'rose' => ['bg' => 'bg-slate-900/90', 'text' => 'text-slate-200', 'border' => 'border-slate-700/80', 'bar' => 'from-slate-950 via-slate-900 to-slate-800'],
+        'slate' => ['bg' => 'bg-slate-900/90', 'text' => 'text-slate-200', 'border' => 'border-slate-700/80', 'bar' => 'from-slate-950 via-slate-900 to-slate-800'],
+        'blue' => ['bg' => 'bg-slate-900/90', 'text' => 'text-slate-200', 'border' => 'border-slate-700/80', 'bar' => 'from-slate-950 via-slate-900 to-slate-800'],
+        'teal' => ['bg' => 'bg-slate-900/90', 'text' => 'text-slate-200', 'border' => 'border-slate-700/80', 'bar' => 'from-slate-950 via-slate-900 to-slate-800']
     ];
 
     return $accents[$accent] ?? $accents['sky'];
@@ -227,57 +213,80 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
             theme: {
                 extend: {
                     colors: {
-                        ink: '#171717',
-                        paper: '#e5e5e5',
-                        line: '#c9c9c9'
+                        metallic: {
+                            100: '#e6edf5',
+                            200: '#d0dbe7',
+                            300: '#b4c3d4',
+                            400: '#94a5ba',
+                            500: '#73869c',
+                            600: '#56687e',
+                            700: '#3e4d60',
+                            800: '#283445',
+                            900: '#17212f',
+                            950: '#0c121d'
+                        }
                     },
                     boxShadow: {
-                        soft: '0 18px 45px rgba(15, 23, 42, .08)',
-                        lift: '0 24px 70px rgba(15, 23, 42, .13)'
+                        glass: '0 20px 40px rgba(12, 18, 29, .25)',
+                        card: '0 12px 30px rgba(12, 18, 29, .2)',
+                        glow: '0 0 30px rgba(180, 195, 212, .25)'
                     }
                 }
             }
         }
     </script>
     <style>
-        html { scroll-behavior: smooth; }
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             background:
-                radial-gradient(circle at top left, rgba(255, 255, 255, .76), transparent 30rem),
-                radial-gradient(circle at 92% 18%, rgba(120, 120, 120, .2), transparent 28rem),
-                radial-gradient(circle at 18% 72%, rgba(185, 28, 28, .08), transparent 30rem),
-                linear-gradient(180deg, #f1f1f1 0%, #d8d8d8 48%, #eeeeee 100%);
+                radial-gradient(circle at 10% 10%, rgba(208, 219, 231, .6), transparent 32rem),
+                radial-gradient(circle at 90% 90%, rgba(86, 104, 126, .45), transparent 36rem),
+                linear-gradient(135deg, #d8e2ec 0%, #b0c0d2 25%, #7e91a7 55%, #4f6176 80%, #2a3748 100%);
             background-attachment: fixed;
+            color: #0c121d;
+            overflow-x: hidden;
+        }
+        .page-section {
+            min-height: calc(100vh - 5.5rem);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 6rem;
+            padding-bottom: 3.5rem;
+            box-sizing: border-box;
+            transition: opacity .4s ease, transform .4s ease;
+        }
+        .page-section.is-tab-hidden {
+            display: none !important;
         }
         .fade-slide {
             opacity: 0;
             transform: translateY(18px);
-            transition: opacity .55s ease, transform .55s ease;
+            transition: opacity .55s cubic-bezier(0.16, 1, 0.3, 1), transform .55s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .fade-slide.show {
             opacity: 1;
             transform: translateY(0);
         }
         .hero-bg {
-            background:
-                linear-gradient(135deg, rgba(250, 250, 250, .92), rgba(214, 214, 214, .84)),
-                radial-gradient(circle at 15% 22%, rgba(255, 255, 255, .72), transparent 24rem),
-                radial-gradient(circle at 78% 12%, rgba(115, 115, 115, .18), transparent 24rem),
-                radial-gradient(circle at 58% 90%, rgba(153, 27, 27, .1), transparent 26rem);
+            background: transparent;
         }
         .accent-line {
-            background: linear-gradient(90deg, #1f1f1f, #b8b8b8, #7f1d1d);
+            background: linear-gradient(90deg, #d0dbe7, #73869c, #17212f, #73869c, #d0dbe7);
         }
         .name-text {
-            color: #171717;
-            text-shadow: 0 8px 28px rgba(23, 23, 23, .14);
+            background: linear-gradient(135deg, #0c121d 0%, #283445 50%, #4e5f76 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         .portfolio-grid {
             background-image:
-                linear-gradient(rgba(38, 38, 38, .08) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(115, 115, 115, .08) 1px, transparent 1px);
-            background-size: 34px 34px;
+                linear-gradient(rgba(30, 45, 65, .08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(30, 45, 65, .08) 1px, transparent 1px);
+            background-size: 32px 32px;
         }
         .project-card.is-hidden {
             display: none;
@@ -325,61 +334,63 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
         }
     </style>
 </head>
-<body class="text-neutral-950 antialiased">
+<body class="text-slate-900 antialiased">
     <header class="fixed inset-x-0 top-0 z-50">
         <div class="mx-auto max-w-7xl px-4 pt-4">
-            <div class="rounded-2xl border border-zinc-300/80 bg-zinc-100/90 px-4 py-3 shadow-sm backdrop-blur">
+            <div class="rounded-2xl border border-slate-300/80 bg-slate-100/85 px-4 py-3 shadow-glass backdrop-blur-md">
                 <div class="flex items-center justify-between gap-4">
                     <a href="#home" class="flex min-w-0 items-center gap-3" aria-label="<?= e($profile['name']); ?>">
-                        <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-neutral-900 font-black text-zinc-100">S</span>
-                        <span class="truncate font-black"><?= e($profile['name']); ?></span>
+                        <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-slate-900 font-black text-slate-100 shadow-sm">S</span>
+                        <span class="truncate font-black text-slate-900"><?= e($profile['name']); ?></span>
                     </a>
 
-                    <nav class="hidden items-center gap-1 text-sm font-semibold text-zinc-700 md:flex">
-                        <a href="#about" class="rounded-xl px-4 py-2 transition hover:bg-zinc-200 hover:text-neutral-950">Tentang</a>
-                        <a href="#skills" class="rounded-xl px-4 py-2 transition hover:bg-zinc-200 hover:text-neutral-950">Skill</a>
-                        <a href="#projects" class="rounded-xl px-4 py-2 transition hover:bg-zinc-200 hover:text-neutral-950">Project</a>
-                        <a href="#contact" class="rounded-xl px-4 py-2 transition hover:bg-zinc-200 hover:text-neutral-950">Kontak</a>
+                    <nav class="hidden items-center gap-1 text-sm font-semibold text-slate-800 md:flex">
+                        <a href="#home" class="nav-tab rounded-xl px-4 py-2 transition hover:bg-slate-200/80 hover:text-slate-950 data-[active=true]:bg-slate-900 data-[active=true]:text-slate-100" data-tab="home" data-active="true">Beranda</a>
+                        <a href="#about" class="nav-tab rounded-xl px-4 py-2 transition hover:bg-slate-200/80 hover:text-slate-950 data-[active=true]:bg-slate-900 data-[active=true]:text-slate-100" data-tab="about" data-active="false">Tentang</a>
+                        <a href="#skills" class="nav-tab rounded-xl px-4 py-2 transition hover:bg-slate-200/80 hover:text-slate-950 data-[active=true]:bg-slate-900 data-[active=true]:text-slate-100" data-tab="skills" data-active="false">Skill</a>
+                        <a href="#projects" class="nav-tab rounded-xl px-4 py-2 transition hover:bg-slate-200/80 hover:text-slate-950 data-[active=true]:bg-slate-900 data-[active=true]:text-slate-100" data-tab="projects" data-active="false">Project</a>
+                        <a href="#contact" class="nav-tab rounded-xl px-4 py-2 transition hover:bg-slate-200/80 hover:text-slate-950 data-[active=true]:bg-slate-900 data-[active=true]:text-slate-100" data-tab="contact" data-active="false">Kontak</a>
                     </nav>
 
-                    <a href="#contact" class="hidden rounded-xl bg-neutral-900 px-5 py-2.5 text-sm font-bold text-zinc-100 transition hover:bg-zinc-700 sm:inline-flex">Hubungi</a>
+                    <a href="#contact" data-tab="contact" class="nav-tab hidden rounded-xl bg-slate-900 px-5 py-2.5 text-sm font-bold text-slate-100 transition hover:bg-slate-800 sm:inline-flex">Hubungi</a>
 
-                    <button id="menuBtn" class="grid h-10 w-10 place-items-center rounded-xl border border-zinc-300/80 text-neutral-950 md:hidden" aria-label="Buka menu" aria-expanded="false">
+                    <button id="menuBtn" class="grid h-10 w-10 place-items-center rounded-xl border border-slate-300/80 text-slate-900 md:hidden" aria-label="Buka menu" aria-expanded="false">
                         <i data-lucide="menu" class="h-5 w-5"></i>
                     </button>
                 </div>
 
-                <nav id="mobileMenu" class="mt-3 hidden border-t border-zinc-300/80 pt-3 text-sm font-semibold text-zinc-700 md:hidden">
-                    <a href="#about" class="block rounded-xl px-3 py-2 hover:bg-zinc-200">Tentang</a>
-                    <a href="#skills" class="block rounded-xl px-3 py-2 hover:bg-zinc-200">Skill</a>
-                    <a href="#projects" class="block rounded-xl px-3 py-2 hover:bg-zinc-200">Project</a>
-                    <a href="#contact" class="block rounded-xl px-3 py-2 hover:bg-zinc-200">Kontak</a>
+                <nav id="mobileMenu" class="mt-3 hidden border-t border-slate-300/80 pt-3 text-sm font-semibold text-slate-800 md:hidden">
+                    <a href="#home" data-tab="home" class="nav-tab block rounded-xl px-3 py-2 hover:bg-slate-200">Beranda</a>
+                    <a href="#about" data-tab="about" class="nav-tab block rounded-xl px-3 py-2 hover:bg-slate-200">Tentang</a>
+                    <a href="#skills" data-tab="skills" class="nav-tab block rounded-xl px-3 py-2 hover:bg-slate-200">Skill</a>
+                    <a href="#projects" data-tab="projects" class="nav-tab block rounded-xl px-3 py-2 hover:bg-slate-200">Project</a>
+                    <a href="#contact" data-tab="contact" class="nav-tab block rounded-xl px-3 py-2 hover:bg-slate-200">Kontak</a>
                 </nav>
             </div>
         </div>
     </header>
 
-    <main id="home">
-        <section class="hero-bg px-4 pt-32 pb-16 sm:pt-36 sm:pb-20">
+    <main>
+        <section id="home" class="page-section hero-bg px-4">
             <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.02fr_.98fr] lg:items-center">
                 <div class="fade-slide">
-                    <div class="inline-flex items-center gap-2 rounded-full border border-zinc-300/80 bg-zinc-100 px-4 py-2 text-sm font-bold text-zinc-700 shadow-sm">
-                        <span class="h-2 w-2 rounded-full bg-red-800"></span>
+                    <div class="inline-flex items-center gap-2 rounded-full border border-slate-400/60 bg-slate-100/90 px-4 py-2 text-sm font-bold text-slate-800 shadow-sm backdrop-blur">
+                        <span class="h-2 w-2 rounded-full bg-slate-700"></span>
                         <?= e($profile['eyebrow']); ?>
                     </div>
 
-                    <h1 class="mt-7 max-w-4xl text-4xl font-black leading-tight text-neutral-950 sm:text-6xl">
+                    <h1 class="mt-7 max-w-4xl text-4xl font-black leading-tight text-slate-950 sm:text-6xl">
                         Portofolio <span class="name-text"><?= e($profile['name']); ?></span>.
                     </h1>
-                    <p class="mt-5 max-w-2xl text-xl font-bold text-neutral-900"><?= e($profile['role']); ?></p>
-                    <p class="mt-4 max-w-2xl text-base leading-7 text-zinc-700 sm:text-lg"><?= e($profile['tagline']); ?></p>
+                    <p class="mt-5 max-w-2xl text-xl font-bold text-slate-900"><?= e($profile['role']); ?></p>
+                    <p class="mt-4 max-w-2xl text-base leading-7 text-slate-800 sm:text-lg"><?= e($profile['tagline']); ?></p>
 
                     <div class="mt-8 flex flex-wrap gap-3">
-                        <a href="#projects" class="inline-flex items-center justify-center gap-2 rounded-xl bg-neutral-900 px-6 py-3.5 text-sm font-bold text-zinc-100 shadow-soft transition hover:bg-zinc-700">
+                        <a href="#projects" class="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-900 px-6 py-3.5 text-sm font-bold text-slate-100 shadow-card transition hover:bg-slate-800">
                             <i data-lucide="briefcase-business" class="h-5 w-5"></i>
                             Lihat Project
                         </a>
-                        <a href="<?= e($profile['whatsapp']); ?>" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 rounded-xl border border-zinc-300 bg-zinc-100 px-5 py-3.5 text-sm font-bold text-neutral-800 transition hover:bg-zinc-200">
+                        <a href="<?= e($profile['whatsapp']); ?>" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-400/80 bg-slate-100/90 px-5 py-3.5 text-sm font-bold text-slate-900 transition hover:bg-slate-200">
                             <i data-lucide="message-square" class="h-5 w-5"></i>
                             Chat WhatsApp
                         </a>
@@ -387,43 +398,43 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
 
                     <div class="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-3">
                         <?php foreach($profile['stats'] as $stat): ?>
-                            <div class="rounded-2xl border border-zinc-300/80 bg-zinc-100/90 p-4 shadow-sm">
+                            <div class="rounded-2xl border border-slate-400/60 bg-slate-100/90 p-4 shadow-card backdrop-blur">
                                 <div class="flex items-center justify-between gap-3">
-                                    <span class="text-2xl font-black"><?= e($stat['value']); ?></span>
-                                    <span class="grid h-10 w-10 place-items-center rounded-xl <?= e($stat['bg']); ?> <?= e($stat['color']); ?>">
+                                    <span class="text-2xl font-black text-slate-950"><?= e($stat['value']); ?></span>
+                                    <span class="grid h-10 w-10 place-items-center rounded-xl bg-slate-200 text-slate-900 border border-slate-300">
                                         <i data-lucide="<?= e($stat['icon']); ?>" class="h-5 w-5"></i>
                                     </span>
                                 </div>
-                                <p class="mt-2 text-xs font-bold uppercase tracking-wide text-zinc-600"><?= e($stat['label']); ?></p>
+                                <p class="mt-2 text-xs font-bold uppercase tracking-wide text-slate-700"><?= e($stat['label']); ?></p>
                             </div>
                         <?php endforeach; ?>
                     </div>
                 </div>
 
                 <div class="fade-slide">
-                    <div class="overflow-hidden rounded-3xl border border-zinc-300/80 bg-zinc-100/95 shadow-lift">
+                    <div class="overflow-hidden rounded-3xl border border-slate-400/60 bg-slate-100/95 shadow-glass">
                         <div class="accent-line h-2"></div>
                         <div class="portfolio-grid p-5 sm:p-6">
-                            <div class="rounded-2xl border border-zinc-300/80 bg-zinc-50/90 p-5 shadow-sm">
+                            <div class="rounded-2xl border border-slate-300/80 bg-slate-50/90 p-5 shadow-card">
                                 <div class="flex items-start justify-between gap-4">
                                     <div>
-                                        <p class="text-sm font-black uppercase tracking-[.18em] text-zinc-600">2026 Portfolio</p>
-                                        <h2 class="mt-2 text-3xl font-black"><?= e($profile['name']); ?></h2>
+                                        <p class="text-sm font-black uppercase tracking-[.18em] text-slate-700">2026 Portfolio</p>
+                                        <h2 class="mt-2 text-3xl font-black text-slate-950"><?= e($profile['name']); ?></h2>
                                     </div>
-                                    <div class="grid h-14 w-14 place-items-center rounded-2xl bg-neutral-900 text-zinc-100">
+                                    <div class="grid h-14 w-14 place-items-center rounded-2xl bg-slate-900 text-slate-100">
                                         <i data-lucide="code-2" class="h-7 w-7"></i>
                                     </div>
                                 </div>
-                                <p class="mt-5 text-sm leading-6 text-zinc-700"><?= e($profile['bio']); ?></p>
+                                <p class="mt-5 text-sm leading-6 text-slate-800"><?= e($profile['bio']); ?></p>
                             </div>
 
                             <div class="mt-4 grid gap-4 sm:grid-cols-2">
                                 <?php foreach($profile['education'] as $edu): ?>
-                                    <div class="rounded-2xl border border-zinc-300/80 bg-zinc-50/90 p-4 shadow-sm">
-                                        <i data-lucide="graduation-cap" class="h-5 w-5 text-red-800"></i>
-                                        <p class="mt-3 text-sm font-black"><?= e($edu['school']); ?></p>
-                                        <p class="mt-1 text-xs font-bold text-zinc-600"><?= e($edu['period']); ?></p>
-                                        <p class="mt-2 text-sm text-zinc-700"><?= e($edu['major']); ?></p>
+                                    <div class="rounded-2xl border border-slate-300/80 bg-slate-50/90 p-4 shadow-card">
+                                        <i data-lucide="graduation-cap" class="h-5 w-5 text-slate-800"></i>
+                                        <p class="mt-3 text-sm font-black text-slate-950"><?= e($edu['school']); ?></p>
+                                        <p class="mt-1 text-xs font-bold text-slate-700"><?= e($edu['period']); ?></p>
+                                        <p class="mt-2 text-sm text-slate-800"><?= e($edu['major']); ?></p>
                                     </div>
                                 <?php endforeach; ?>
                             </div>
@@ -433,62 +444,60 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
             </div>
         </section>
 
-        <section id="about" class="px-4 py-16 sm:py-20">
+        <section id="about" class="page-section px-4">
             <div class="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[.75fr_1.25fr]">
                 <div class="fade-slide">
-                    <p class="text-sm font-black uppercase tracking-[.2em] text-red-800">Tentang</p>
-                    <h2 class="mt-3 text-3xl font-black leading-tight sm:text-4xl">Fokus pada solusi digital yang efisien dan inovatif.</h2>
-                    <p class="mt-4 leading-7 text-zinc-700">Pengalaman project mencakup sistem informasi kampus, aplikasi koperasi digital, absensi mobile, PWA operasional bisnis, company profile, dan perapihan UI website.</p>
+                    <p class="text-sm font-black uppercase tracking-[.2em] text-slate-700">Tentang</p>
+                    <h2 class="mt-3 text-3xl font-black leading-tight text-slate-950 sm:text-4xl">Fokus pada solusi digital yang efisien dan inovatif.</h2>
+                    <p class="mt-4 leading-7 text-slate-800">Pengalaman project mencakup sistem informasi kampus, aplikasi koperasi digital, absensi mobile, PWA operasional bisnis, company profile, dan perapihan UI website.</p>
                 </div>
                 <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                     <?php foreach($profile['services'] as $index => $service): ?>
-                        <?php $colors = [['bg' => 'bg-zinc-200', 'text' => 'text-zinc-800'], ['bg' => 'bg-neutral-200', 'text' => 'text-neutral-800'], ['bg' => 'bg-stone-200', 'text' => 'text-stone-800'], ['bg' => 'bg-red-100', 'text' => 'text-red-800']]; ?>
-                        <?php $color = $colors[$index % count($colors)]; ?>
-                        <article class="fade-slide rounded-2xl border border-zinc-300/80 bg-zinc-100/90 p-5 shadow-sm transition hover:-translate-y-1 hover:bg-zinc-50 hover:shadow-soft">
-                            <div class="grid h-11 w-11 place-items-center rounded-xl <?= e($color['bg']); ?> <?= e($color['text']); ?>">
+                        <article class="fade-slide rounded-2xl border border-slate-300/80 bg-slate-100/90 p-5 shadow-card transition hover:-translate-y-1 hover:bg-slate-50">
+                            <div class="grid h-11 w-11 place-items-center rounded-xl bg-slate-200 border border-slate-300 text-slate-900">
                                 <i data-lucide="<?= e($service['icon']); ?>" class="h-6 w-6"></i>
                             </div>
-                            <h3 class="mt-5 text-lg font-black"><?= e($service['title']); ?></h3>
-                            <p class="mt-2 text-sm leading-6 text-zinc-700"><?= e($service['desc']); ?></p>
+                            <h3 class="mt-5 text-lg font-black text-slate-950"><?= e($service['title']); ?></h3>
+                            <p class="mt-2 text-sm leading-6 text-slate-700"><?= e($service['desc']); ?></p>
                         </article>
                     <?php endforeach; ?>
                 </div>
             </div>
         </section>
 
-        <section id="skills" class="border-y border-zinc-300/70 bg-zinc-200/60 px-4 py-16 backdrop-blur sm:py-20">
+        <section id="skills" class="page-section border-y border-slate-400/50 bg-slate-200/50 px-4 backdrop-blur">
             <div class="mx-auto max-w-7xl">
                 <div class="fade-slide flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
                     <div>
-                        <p class="text-sm font-black uppercase tracking-[.2em] text-neutral-700">Personal Skill</p>
-                        <h2 class="mt-3 text-3xl font-black sm:text-4xl">Tech stack dari PDF portofolio.</h2>
+                        <p class="text-sm font-black uppercase tracking-[.2em] text-slate-700">Personal Skill</p>
+                        <h2 class="mt-3 text-3xl font-black text-slate-950 sm:text-4xl">Tech stack dari PDF portofolio.</h2>
                     </div>
-                    <p class="max-w-md text-zinc-700">Skill yang digunakan untuk membangun frontend, backend, aplikasi mobile, integrasi API, dan database.</p>
+                    <p class="max-w-md text-slate-800">Skill yang digunakan untuk membangun frontend, backend, aplikasi mobile, integrasi API, dan database.</p>
                 </div>
 
                 <div class="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
                     <?php foreach($profile['skills'] as $skill): ?>
-                        <div class="fade-slide rounded-2xl border border-zinc-300/80 bg-zinc-100 p-4 transition hover:-translate-y-1 hover:bg-zinc-50 hover:shadow-sm">
-                            <i data-lucide="<?= e($skill['icon']); ?>" class="h-6 w-6 text-neutral-800"></i>
-                            <p class="mt-5 font-black"><?= e($skill['name']); ?></p>
-                            <p class="mt-1 text-xs font-bold uppercase tracking-wide text-zinc-600"><?= e($skill['cat']); ?></p>
+                        <div class="fade-slide rounded-2xl border border-slate-300/80 bg-slate-100 p-4 transition hover:-translate-y-1 hover:bg-slate-50 shadow-card">
+                            <i data-lucide="<?= e($skill['icon']); ?>" class="h-6 w-6 text-slate-900"></i>
+                            <p class="mt-5 font-black text-slate-950"><?= e($skill['name']); ?></p>
+                            <p class="mt-1 text-xs font-bold uppercase tracking-wide text-slate-700"><?= e($skill['cat']); ?></p>
                         </div>
                     <?php endforeach; ?>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="px-4 py-16 sm:py-20">
+        <section id="projects" class="page-section px-4">
             <div class="mx-auto max-w-7xl">
                 <div class="fade-slide flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
                     <div>
-                        <p class="text-sm font-black uppercase tracking-[.2em] text-red-800">Pencapaian Project</p>
-                        <h2 class="mt-3 text-3xl font-black sm:text-4xl">Project lengkap dari portofolio.</h2>
-                        <p class="mt-2 max-w-2xl text-zinc-700">Daftar ini menggabungkan project dari PDF dan project live yang sudah ada di website.</p>
+                        <p class="text-sm font-black uppercase tracking-[.2em] text-slate-700">Pencapaian Project</p>
+                        <h2 class="mt-3 text-3xl font-black text-slate-950 sm:text-4xl">Project lengkap dari portofolio.</h2>
+                        <p class="mt-2 max-w-2xl text-slate-800">Daftar ini menggabungkan project dari PDF dan project live yang sudah ada di website.</p>
                     </div>
                     <div class="flex flex-wrap gap-2" aria-label="Filter project">
                         <?php foreach($projectFilters as $filter): ?>
-                            <button type="button" class="filter-btn rounded-xl border border-zinc-300/80 bg-zinc-100 px-4 py-2 text-sm font-black text-zinc-700 transition hover:border-neutral-500 hover:text-neutral-950 data-[active=true]:bg-neutral-900 data-[active=true]:text-zinc-100" data-filter="<?= e($filter); ?>" data-active="<?= $filter === 'All' ? 'true' : 'false'; ?>">
+                            <button type="button" class="filter-btn rounded-xl border border-slate-400/80 bg-slate-100/90 px-4 py-2 text-sm font-black text-slate-800 transition hover:border-slate-600 hover:text-slate-950 data-[active=true]:bg-slate-900 data-[active=true]:text-slate-100" data-filter="<?= e($filter); ?>" data-active="<?= $filter === 'All' ? 'true' : 'false'; ?>">
                                 <?= e($filter); ?>
                             </button>
                         <?php endforeach; ?>
@@ -500,22 +509,22 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
                         <?php $accent = projectAccent($project['accent']); ?>
                         <?php $isLive = !empty($project['link']); ?>
                         <?php $images = $project['images'] ?? []; ?>
-                        <article class="project-card fade-slide overflow-hidden rounded-3xl border border-zinc-300/80 bg-zinc-100/90 shadow-sm backdrop-blur transition hover:-translate-y-1 hover:shadow-soft" data-type="<?= e($project['type']); ?>">
-                            <div class="bg-gradient-to-br <?= e($accent['bar']); ?> p-3 text-white sm:p-5">
+                        <article class="project-card fade-slide overflow-hidden rounded-3xl border border-slate-400/60 bg-slate-100/90 shadow-card backdrop-blur transition hover:-translate-y-1 hover:border-slate-600" data-type="<?= e($project['type']); ?>">
+                            <div class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 p-3 text-slate-100 sm:p-5">
                                 <div class="mb-3 flex items-center justify-between gap-4">
                                     <span class="rounded-full bg-white/20 px-3 py-1 text-xs font-black"><?= e($project['type']); ?></span>
                                     <span class="grid h-9 w-9 place-items-center rounded-xl bg-white/16">
-                                        <i data-lucide="<?= e($project['icon']); ?>" class="h-5 w-5"></i>
+                                        <i data-lucide="<?= e($project['icon']); ?>" class="h-5 w-5 text-white"></i>
                                     </span>
                                 </div>
                                 <?php if(!empty($images)): ?>
-                                    <a href="<?= e($images[0]['src']); ?>" target="_blank" rel="noopener" class="project-visual overflow-hidden rounded-2xl border border-white/20 bg-zinc-100/95 shadow-sm transition hover:bg-zinc-50">
+                                    <a href="<?= e($images[0]['src']); ?>" target="_blank" rel="noopener" class="project-visual overflow-hidden rounded-2xl border border-white/20 bg-slate-100/95 shadow-sm transition hover:bg-slate-50">
                                         <img src="<?= e($images[0]['src']); ?>" alt="<?= e($images[0]['alt']); ?>" loading="lazy">
                                     </a>
                                     <?php if(count($images) > 1): ?>
                                         <div class="mt-3 grid grid-cols-3 gap-2">
                                             <?php foreach(array_slice($images, 1, 3) as $image): ?>
-                                                <a href="<?= e($image['src']); ?>" target="_blank" rel="noopener" class="project-thumb overflow-hidden rounded-xl border border-white/20 bg-zinc-100/90 transition hover:bg-zinc-50">
+                                                <a href="<?= e($image['src']); ?>" target="_blank" rel="noopener" class="project-thumb overflow-hidden rounded-xl border border-white/20 bg-slate-100/90 transition hover:bg-slate-50">
                                                     <img src="<?= e($image['src']); ?>" alt="<?= e($image['alt']); ?>" loading="lazy">
                                                 </a>
                                             <?php endforeach; ?>
@@ -524,9 +533,9 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
                                 <?php else: ?>
                                     <div class="rounded-2xl bg-white/14 p-4 ring-1 ring-white/20">
                                         <div class="mb-3 flex items-center gap-2">
-                                            <span class="h-2.5 w-2.5 rounded-full bg-red-200"></span>
-                                            <span class="h-2.5 w-2.5 rounded-full bg-zinc-300"></span>
-                                            <span class="h-2.5 w-2.5 rounded-full bg-neutral-300"></span>
+                                            <span class="h-2.5 w-2.5 rounded-full bg-slate-300"></span>
+                                            <span class="h-2.5 w-2.5 rounded-full bg-slate-400"></span>
+                                            <span class="h-2.5 w-2.5 rounded-full bg-slate-500"></span>
                                         </div>
                                         <span class="block h-16 rounded-xl bg-white/28"></span>
                                         <span class="mt-3 block h-2.5 w-11/12 rounded-full bg-white/35"></span>
@@ -537,21 +546,21 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
 
                             <div class="p-5">
                                 <div class="flex items-start justify-between gap-3">
-                                    <h3 class="text-xl font-black leading-tight"><?= e($project['title']); ?></h3>
-                                    <span class="shrink-0 rounded-full <?= e($accent['bg']); ?> px-3 py-1 text-xs font-black <?= e($accent['text']); ?>"><?= e($project['role']); ?></span>
+                                    <h3 class="text-xl font-black leading-tight text-slate-950"><?= e($project['title']); ?></h3>
+                                    <span class="shrink-0 rounded-full bg-slate-200 px-3 py-1 text-xs font-black text-slate-900"><?= e($project['role']); ?></span>
                                 </div>
-                                <p class="mt-4 text-sm leading-6 text-zinc-700"><?= e($project['desc']); ?></p>
-                                <div class="mt-4 rounded-2xl border <?= e($accent['border']); ?> <?= e($accent['bg']); ?> p-4">
-                                    <p class="text-xs font-black uppercase tracking-wide <?= e($accent['text']); ?>">Kontribusi</p>
-                                    <p class="mt-2 text-sm leading-6 text-zinc-800"><?= e($project['contribution']); ?></p>
+                                <p class="mt-4 text-sm leading-6 text-slate-700"><?= e($project['desc']); ?></p>
+                                <div class="mt-4 rounded-2xl border border-slate-300/80 bg-slate-50/90 p-4">
+                                    <p class="text-xs font-black uppercase tracking-wide text-slate-800">Kontribusi</p>
+                                    <p class="mt-2 text-sm leading-6 text-slate-900"><?= e($project['contribution']); ?></p>
                                 </div>
                                 <div class="mt-5 flex flex-wrap gap-2">
                                     <?php foreach($project['stack'] as $stack): ?>
-                                        <span class="rounded-full bg-zinc-200 px-3 py-1 text-xs font-bold text-zinc-700"><?= e($stack); ?></span>
+                                        <span class="rounded-full bg-slate-200 border border-slate-300 px-3 py-1 text-xs font-bold text-slate-800"><?= e($stack); ?></span>
                                     <?php endforeach; ?>
                                 </div>
                                 <?php if($isLive): ?>
-                                    <a href="<?= e($project['link']); ?>" target="_blank" rel="noopener" class="mt-6 inline-flex items-center gap-2 text-sm font-black <?= e($accent['text']); ?> hover:underline">
+                                    <a href="<?= e($project['link']); ?>" target="_blank" rel="noopener" class="mt-6 inline-flex items-center gap-2 text-sm font-black text-slate-900 hover:text-black hover:underline">
                                         Lihat web live
                                         <i data-lucide="external-link" class="h-4 w-4"></i>
                                     </a>
@@ -563,7 +572,7 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
             </div>
         </section>
 
-        <section id="contact" class="px-4 py-16 sm:py-20">
+        <section id="contact" class="page-section px-4">
             <div class="mx-auto max-w-7xl">
                 <div class="overflow-hidden rounded-3xl bg-neutral-900 text-zinc-100 shadow-soft">
                     <div class="accent-line h-2"></div>
@@ -575,14 +584,14 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
 
                             <form id="contactForm" class="mt-8 space-y-4" onsubmit="sendToWhatsapp(event)">
                                 <div>
-                                    <label for="contactName" class="mb-1 block text-xs font-bold uppercase tracking-wider text-zinc-400">Nama Anda</label>
-                                    <input type="text" id="contactName" required placeholder="Masukkan nama..." class="w-full rounded-xl border border-zinc-600 bg-white/10 px-4 py-3 text-sm text-zinc-100 placeholder-zinc-500 transition focus:border-red-300 focus:outline-none">
+                                    <label for="contactName" class="mb-1 block text-xs font-bold uppercase tracking-wider text-slate-400">Nama Anda</label>
+                                    <input type="text" id="contactName" required placeholder="Masukkan nama..." class="w-full rounded-xl border border-slate-700 bg-white/10 px-4 py-3 text-sm text-slate-100 placeholder-slate-400 transition focus:border-slate-400 focus:outline-none">
                                 </div>
                                 <div>
-                                    <label for="contactMessage" class="mb-1 block text-xs font-bold uppercase tracking-wider text-zinc-400">Pesan / Project Detail</label>
-                                    <textarea id="contactMessage" rows="3" required placeholder="Jelaskan kebutuhan project Anda..." class="w-full rounded-xl border border-zinc-600 bg-white/10 px-4 py-3 text-sm text-zinc-100 placeholder-zinc-500 transition focus:border-red-300 focus:outline-none"></textarea>
+                                    <label for="contactMessage" class="mb-1 block text-xs font-bold uppercase tracking-wider text-slate-400">Pesan / Project Detail</label>
+                                    <textarea id="contactMessage" rows="3" required placeholder="Jelaskan kebutuhan project Anda..." class="w-full rounded-xl border border-slate-700 bg-white/10 px-4 py-3 text-sm text-slate-100 placeholder-slate-400 transition focus:border-slate-400 focus:outline-none"></textarea>
                                 </div>
-                                <button type="submit" class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-zinc-200 px-6 py-3.5 text-sm font-black text-neutral-950 shadow-lg transition hover:bg-white">
+                                <button type="submit" class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-slate-100 px-6 py-3.5 text-sm font-black text-slate-950 shadow-lg transition hover:bg-white">
                                     <i data-lucide="message-square" class="h-5 w-5"></i>
                                     Kirim via WhatsApp (<?= e($profile['phone']); ?>)
                                 </button>
@@ -591,28 +600,28 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
 
                         <div class="flex flex-col justify-between border-t border-white/10 p-6 sm:p-10 lg:border-l lg:border-t-0">
                             <div>
-                                <p class="text-sm font-black text-zinc-300">Info Kontak & Media Sosial</p>
+                                <p class="text-sm font-black text-slate-300">Info Kontak & Media Sosial</p>
                                 <div class="mt-5 grid gap-3">
-                                    <a href="tel:<?= e($profile['phone_raw']); ?>" class="flex items-center justify-between rounded-xl border border-zinc-600 bg-white/5 p-4 font-bold text-zinc-100 transition hover:bg-white/10">
+                                    <a href="tel:<?= e($profile['phone_raw']); ?>" class="flex items-center justify-between rounded-xl border border-slate-700 bg-white/5 p-4 font-bold text-slate-100 transition hover:bg-white/10">
                                         <span class="flex items-center gap-3">
-                                            <i data-lucide="phone-call" class="h-5 w-5 text-red-300"></i>
+                                            <i data-lucide="phone-call" class="h-5 w-5 text-slate-300"></i>
                                             <?= e($profile['phone']); ?>
                                         </span>
-                                        <i data-lucide="arrow-up-right" class="h-4 w-4 text-red-300"></i>
+                                        <i data-lucide="arrow-up-right" class="h-4 w-4 text-slate-300"></i>
                                     </a>
 
-                                    <a href="mailto:<?= e($profile['email']); ?>" class="flex items-center justify-between rounded-xl border border-zinc-600 bg-white/5 p-4 font-bold text-zinc-100 transition hover:bg-white/10">
+                                    <a href="mailto:<?= e($profile['email']); ?>" class="flex items-center justify-between rounded-xl border border-slate-700 bg-white/5 p-4 font-bold text-slate-100 transition hover:bg-white/10">
                                         <span class="flex items-center gap-3">
-                                            <i data-lucide="mail" class="h-5 w-5 text-zinc-300"></i>
+                                            <i data-lucide="mail" class="h-5 w-5 text-slate-300"></i>
                                             <?= e($profile['email']); ?>
                                         </span>
-                                        <i data-lucide="arrow-up-right" class="h-4 w-4 text-zinc-300"></i>
+                                        <i data-lucide="arrow-up-right" class="h-4 w-4 text-slate-300"></i>
                                     </a>
 
                                     <?php foreach($profile['socials'] as $social): ?>
                                         <?php if($social['icon'] !== 'mail' && $social['icon'] !== 'phone'): ?>
                                             <?php $brandSvg = brandIcon($social['icon']); ?>
-                                            <a href="<?= e($social['link']); ?>" target="_blank" rel="noopener" class="flex items-center justify-between rounded-xl border border-zinc-600 bg-white/5 p-4 font-bold text-zinc-100 transition hover:bg-white/10">
+                                            <a href="<?= e($social['link']); ?>" target="_blank" rel="noopener" class="flex items-center justify-between rounded-xl border border-slate-700 bg-white/5 p-4 font-bold text-slate-100 transition hover:bg-white/10">
                                                 <span class="flex items-center gap-3">
                                                     <?php if($brandSvg): ?>
                                                         <?= $brandSvg; ?>
@@ -621,14 +630,14 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
                                                     <?php endif; ?>
                                                     <?= e($social['label']); ?>
                                                 </span>
-                                                <i data-lucide="arrow-up-right" class="h-4 w-4 text-zinc-300"></i>
+                                                <i data-lucide="arrow-up-right" class="h-4 w-4 text-slate-300"></i>
                                             </a>
                                         <?php endif; ?>
                                     <?php endforeach; ?>
                                 </div>
                             </div>
 
-                            <a href="#home" class="mt-8 inline-flex items-center justify-center gap-2 rounded-xl border border-zinc-600 px-5 py-3 text-sm font-black text-zinc-100 transition hover:bg-white/10">
+                            <a href="#home" class="mt-8 inline-flex items-center justify-center gap-2 rounded-xl border border-slate-700 px-5 py-3 text-sm font-black text-slate-100 transition hover:bg-white/10">
                                 <i data-lucide="arrow-up" class="h-4 w-4"></i>
                                 Kembali ke atas
                             </a>
@@ -639,27 +648,6 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
         </section>
     </main>
 
-    <footer class="border-t border-zinc-300/80 bg-zinc-100/80 px-4 py-8 backdrop-blur">
-        <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 text-center text-sm text-zinc-600 sm:flex-row sm:text-left">
-            <div>
-                <p class="font-bold text-neutral-800">&copy; <?= date('Y'); ?> <?= e($profile['name']); ?>. All rights reserved.</p>
-                <p class="mt-1">Dibuat dengan PHP, TailwindCSS, Lucide, dan data portofolio 2026.</p>
-            </div>
-            <div class="flex items-center gap-2">
-                <?php foreach($profile['socials'] as $social): ?>
-                    <?php $brandSvg = brandIcon($social['icon']); ?>
-                    <a href="<?= e($social['link']); ?>" target="_blank" rel="noopener" class="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-zinc-300/80 bg-zinc-50 text-zinc-700 transition hover:border-red-300 hover:text-red-800" aria-label="<?= e($social['label']); ?>">
-                        <?php if($brandSvg): ?>
-                            <?= $brandSvg; ?>
-                        <?php else: ?>
-                            <i data-lucide="<?= e($social['icon']); ?>" class="h-5 w-5"></i>
-                        <?php endif; ?>
-                    </a>
-                <?php endforeach; ?>
-            </div>
-        </div>
-    </footer>
-
     <script>
         lucide.createIcons();
 
@@ -667,6 +655,43 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
         const mobileMenu = document.getElementById('mobileMenu');
         const filterButtons = document.querySelectorAll('.filter-btn');
         const projectCards = document.querySelectorAll('.project-card');
+        const navTabs = document.querySelectorAll('.nav-tab');
+        const pageSections = document.querySelectorAll('.page-section');
+
+        function switchTab(targetId) {
+            pageSections.forEach((section) => {
+                const isMatch = section.id === targetId;
+                section.classList.toggle('is-tab-hidden', !isMatch);
+                if (isMatch) {
+                    section.querySelectorAll('.fade-slide').forEach((el) => el.classList.add('show'));
+                }
+            });
+
+            navTabs.forEach((tab) => {
+                const isMatch = tab.dataset.tab === targetId;
+                tab.setAttribute('data-active', String(isMatch));
+            });
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        navTabs.forEach((tab) => {
+            tab.addEventListener('click', (e) => {
+                const targetId = tab.dataset.tab;
+                if (targetId) {
+                    e.preventDefault();
+                    switchTab(targetId);
+                }
+            });
+        });
+
+        // Initialize default tab from hash or 'home'
+        const initialHash = window.location.hash.replace('#', '') || 'home';
+        if (document.getElementById(initialHash)) {
+            switchTab(initialHash);
+        } else {
+            switchTab('home');
+        }
 
         menuBtn.addEventListener('click', () => {
             const isOpen = !mobileMenu.classList.contains('hidden');
@@ -702,17 +727,6 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
             const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
             window.open(url, '_blank');
         }
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.14 });
-
-        document.querySelectorAll('.fade-slide').forEach((el) => observer.observe(el));
     </script>
 </body>
 </html>
