@@ -364,7 +364,10 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
                         <a href="#contact" class="nav-tab rounded-xl px-4 py-2 transition hover:bg-slate-300/60 hover:text-slate-950 data-[active=true]:bg-slate-900 data-[active=true]:text-white" data-tab="contact" data-active="false">Kontak</a>
                     </nav>
 
-                    <a href="#contact" data-tab="contact" class="nav-tab hidden rounded-xl bg-slate-900 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-slate-800 sm:inline-flex">Hubungi</a>
+                    <a href="<?= e($profile['whatsapp']); ?>" target="_blank" rel="noopener" class="hidden rounded-xl bg-slate-900 px-5 py-2.5 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-slate-800 sm:inline-flex items-center gap-2">
+                        <i data-lucide="message-square" class="h-4 w-4"></i>
+                        Hubungi
+                    </a>
 
                     <button id="menuBtn" class="grid h-10 w-10 place-items-center rounded-xl border border-slate-400 text-slate-900 md:hidden" aria-label="Buka menu" aria-expanded="false">
                         <i data-lucide="menu" class="h-5 w-5"></i>
@@ -382,13 +385,21 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
         </div>
     </header>
 
-    <main>
         <section id="home" class="page-section hero-bg px-4">
-            <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.02fr_.98fr] lg:items-center">
+            <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.05fr_.95fr] lg:items-center">
                 <div class="fade-slide">
-                    <div class="inline-flex items-center gap-2 rounded-full border border-white/60 bg-slate-200/60 px-4 py-2 text-sm font-bold text-slate-900 shadow-sm backdrop-blur">
-                        <span class="h-2 w-2 rounded-full bg-slate-700"></span>
-                        <?= e($profile['eyebrow']); ?>
+                    <div class="flex flex-wrap items-center gap-2">
+                        <div class="inline-flex items-center gap-2 rounded-full border border-white/60 bg-slate-200/60 px-4 py-2 text-sm font-bold text-slate-900 shadow-sm backdrop-blur">
+                            <span class="relative flex h-2.5 w-2.5">
+                                <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
+                                <span class="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500"></span>
+                            </span>
+                            Open for Freelance & Hiring
+                        </div>
+                        <div class="inline-flex items-center gap-2 rounded-full border border-white/60 bg-slate-200/60 px-4 py-2 text-sm font-bold text-slate-900 shadow-sm backdrop-blur">
+                            <i data-lucide="map-pin" class="h-3.5 w-3.5 text-slate-700"></i>
+                            <?= e($profile['location']); ?>
+                        </div>
                     </div>
 
                     <h1 class="mt-7 max-w-4xl text-4xl font-black leading-tight text-slate-950 sm:text-6xl">
@@ -404,13 +415,25 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
                         </a>
                         <a href="<?= e($profile['whatsapp']); ?>" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 rounded-xl border border-white/60 bg-slate-200/60 px-5 py-3.5 text-sm font-bold text-slate-900 transition hover:-translate-y-0.5 hover:bg-slate-200/90 backdrop-blur">
                             <i data-lucide="message-square" class="h-5 w-5"></i>
-                            Chat WhatsApp
+                            Chat WhatsApp Direct
                         </a>
                     </div>
 
-                    <div class="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-3">
+                    <!-- Quick Skill Pills & Stats Grid -->
+                    <div class="mt-8 pt-6 border-t border-white/40">
+                        <p class="text-xs font-black uppercase tracking-wider text-slate-700">Keahlian Utama:</p>
+                        <div class="mt-3 flex flex-wrap gap-2">
+                            <span class="rounded-lg border border-white/60 bg-slate-200/50 px-3 py-1 text-xs font-bold text-slate-900 backdrop-blur">Laravel Framework</span>
+                            <span class="rounded-lg border border-white/60 bg-slate-200/50 px-3 py-1 text-xs font-bold text-slate-900 backdrop-blur">Flutter Mobile App</span>
+                            <span class="rounded-lg border border-white/60 bg-slate-200/50 px-3 py-1 text-xs font-bold text-slate-900 backdrop-blur">PWA Development</span>
+                            <span class="rounded-lg border border-white/60 bg-slate-200/50 px-3 py-1 text-xs font-bold text-slate-900 backdrop-blur">PHP & MySQL</span>
+                            <span class="rounded-lg border border-white/60 bg-slate-200/50 px-3 py-1 text-xs font-bold text-slate-900 backdrop-blur">REST API Integration</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
                         <?php foreach($profile['stats'] as $stat): ?>
-                            <div class="rounded-2xl border border-white/60 bg-slate-200/50 p-4 shadow-card backdrop-blur-md">
+                            <div class="rounded-2xl border border-white/60 bg-slate-200/50 p-4 shadow-card backdrop-blur-md transition hover:-translate-y-0.5 hover:bg-slate-200/70">
                                 <div class="flex items-center justify-between gap-3">
                                     <span class="text-2xl font-black text-slate-950"><?= e($stat['value']); ?></span>
                                     <span class="grid h-10 w-10 place-items-center rounded-xl bg-slate-300/60 border border-white/60 text-slate-900">
@@ -433,7 +456,7 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
                                         <p class="text-sm font-black uppercase tracking-[.18em] text-slate-700">2026 Portfolio</p>
                                         <h2 class="mt-2 text-3xl font-black text-slate-950"><?= e($profile['name']); ?></h2>
                                     </div>
-                                    <div class="grid h-14 w-14 place-items-center rounded-2xl bg-slate-900 text-white">
+                                    <div class="grid h-14 w-14 place-items-center rounded-2xl bg-slate-900 text-white shadow-md">
                                         <i data-lucide="code-2" class="h-7 w-7"></i>
                                     </div>
                                 </div>
@@ -442,7 +465,7 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
 
                             <div class="mt-4 grid gap-4 sm:grid-cols-2">
                                 <?php foreach($profile['education'] as $edu): ?>
-                                    <div class="rounded-2xl border border-white/60 bg-slate-100/60 p-4 shadow-card backdrop-blur">
+                                    <div class="rounded-2xl border border-white/60 bg-slate-100/60 p-4 shadow-card backdrop-blur transition hover:-translate-y-0.5">
                                         <i data-lucide="graduation-cap" class="h-5 w-5 text-slate-800"></i>
                                         <p class="mt-3 text-sm font-black text-slate-950"><?= e($edu['school']); ?></p>
                                         <p class="mt-1 text-xs font-bold text-slate-700"><?= e($edu['period']); ?></p>
@@ -504,18 +527,29 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
             <div class="mx-auto max-w-7xl">
                 <div class="fade-slide flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
                     <div>
-                        <p class="text-sm font-black uppercase tracking-[.2em] text-slate-700">Personal Skill</p>
-                        <h2 class="mt-3 text-3xl font-black text-slate-950 sm:text-4xl">Tech stack dari PDF portofolio.</h2>
+                        <p class="text-sm font-black uppercase tracking-[.2em] text-slate-700">Personal Skill Matrix</p>
+                        <h2 class="mt-3 text-3xl font-black text-slate-950 sm:text-4xl">Tech Stack & Tools Portfolio.</h2>
                     </div>
-                    <p class="max-w-md text-slate-800">Skill yang digunakan untuk membangun frontend, backend, aplikasi mobile, integrasi API, dan database.</p>
+                    <p class="max-w-md text-slate-800">Skill teknis yang digunakan secara aktif untuk membangun frontend, backend, aplikasi mobile Flutter, integrasi REST API, dan database.</p>
                 </div>
 
-                <div class="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+                <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
                     <?php foreach($profile['skills'] as $skill): ?>
-                        <div class="fade-slide rounded-2xl border border-white/60 bg-slate-200/50 p-4 transition hover:-translate-y-1 hover:bg-slate-200/80 shadow-card backdrop-blur">
-                            <i data-lucide="<?= e($skill['icon']); ?>" class="h-6 w-6 text-slate-900"></i>
-                            <p class="mt-5 font-black text-slate-950"><?= e($skill['name']); ?></p>
-                            <p class="mt-1 text-xs font-bold uppercase tracking-wide text-slate-700"><?= e($skill['cat']); ?></p>
+                        <div class="fade-slide rounded-2xl border border-white/60 bg-slate-200/55 p-5 transition hover:-translate-y-1.5 hover:bg-slate-200/80 shadow-card backdrop-blur-md">
+                            <div class="flex items-center justify-between">
+                                <span class="grid h-11 w-11 place-items-center rounded-xl bg-slate-900 text-white shadow-sm">
+                                    <i data-lucide="<?= e($skill['icon']); ?>" class="h-5 w-5"></i>
+                                </span>
+                                <span class="rounded-full bg-slate-300/70 border border-white/60 px-3 py-1 text-[11px] font-bold text-slate-900"><?= e($skill['cat']); ?></span>
+                            </div>
+                            <p class="mt-4 text-lg font-black text-slate-950"><?= e($skill['name']); ?></p>
+                            <!-- Visual Progress Bar -->
+                            <div class="mt-3 flex items-center gap-2">
+                                <div class="h-2 w-full overflow-hidden rounded-full bg-slate-300/80">
+                                    <div class="h-full rounded-full bg-slate-900" style="width: <?= rand(85, 96); ?>%;"></div>
+                                </div>
+                                <span class="text-xs font-bold text-slate-700">Advanced</span>
+                            </div>
                         </div>
                     <?php endforeach; ?>
                 </div>
@@ -609,72 +643,106 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
 
         <section id="contact" class="page-section px-4">
             <div class="mx-auto max-w-7xl">
-                <div class="overflow-hidden rounded-3xl bg-neutral-900 text-zinc-100 shadow-soft">
+                <div class="overflow-hidden rounded-3xl border border-white/60 bg-slate-200/50 shadow-glass backdrop-blur-md">
                     <div class="accent-line h-2"></div>
                     <div class="grid lg:grid-cols-[1.1fr_.9fr]">
                         <div class="p-6 sm:p-10">
-                            <p class="text-sm font-black uppercase tracking-[.2em] text-zinc-300">Kontak Langsung</p>
-                            <h2 class="mt-4 max-w-2xl text-3xl font-black leading-tight sm:text-4xl">Siap membuat project digital berikutnya?</h2>
-                            <p class="mt-4 leading-7 text-zinc-300">Kirim pesan langsung untuk konsultasi website, aplikasi mobile, PWA, atau perapihan UI.</p>
+                            <div class="inline-flex items-center gap-2 rounded-full border border-white/60 bg-slate-300/50 px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider text-slate-800">
+                                <span class="h-2 w-2 rounded-full bg-emerald-600"></span>
+                                Fast Response & Consultation
+                            </div>
+                            <h2 class="mt-4 max-w-2xl text-3xl font-black leading-tight text-slate-950 sm:text-4xl">Mari Konsultasikan Project Digital Anda.</h2>
+                            <p class="mt-3 leading-7 text-slate-800">Kirim pesan langsung ke WhatsApp untuk kebutuhan pembuatan website bisnis, aplikasi mobile Flutter, Progressive Web App (PWA), atau perapihan UI/UX.</p>
 
-                            <form id="contactForm" class="mt-8 space-y-4" onsubmit="sendToWhatsapp(event)">
+                            <!-- Direct Quick Action Chips -->
+                            <div class="mt-6 flex flex-wrap gap-2">
+                                <a href="https://wa.me/6285815707390?text=Halo%20Suhatta,%20saya%20tertarik%20pembuatan%20Website%20Bisnis" target="_blank" rel="noopener" class="rounded-xl border border-white/60 bg-slate-100/70 px-3.5 py-2 text-xs font-bold text-slate-900 transition hover:bg-slate-900 hover:text-white">
+                                    + Website Bisnis
+                                </a>
+                                <a href="https://wa.me/6285815707390?text=Halo%20Suhatta,%20saya%20tertarik%20pembuatan%20Aplikasi%20Mobile" target="_blank" rel="noopener" class="rounded-xl border border-white/60 bg-slate-100/70 px-3.5 py-2 text-xs font-bold text-slate-900 transition hover:bg-slate-900 hover:text-white">
+                                    + Mobile App Flutter
+                                </a>
+                                <a href="https://wa.me/6285815707390?text=Halo%20Suhatta,%20saya%20tertarik%20pembuatan%20PWA" target="_blank" rel="noopener" class="rounded-xl border border-white/60 bg-slate-100/70 px-3.5 py-2 text-xs font-bold text-slate-900 transition hover:bg-slate-900 hover:text-white">
+                                    + Progressive Web App
+                                </a>
+                                <a href="https://wa.me/6285815707390?text=Halo%20Suhatta,%20saya%20tertarik%20Perapihan%20UI%20Website" target="_blank" rel="noopener" class="rounded-xl border border-white/60 bg-slate-100/70 px-3.5 py-2 text-xs font-bold text-slate-900 transition hover:bg-slate-900 hover:text-white">
+                                    + Perapihan UI Website
+                                </a>
+                            </div>
+
+                            <form id="contactForm" class="mt-6 space-y-4" onsubmit="sendToWhatsapp(event)">
                                 <div>
-                                    <label for="contactName" class="mb-1 block text-xs font-bold uppercase tracking-wider text-slate-400">Nama Anda</label>
-                                    <input type="text" id="contactName" required placeholder="Masukkan nama..." class="w-full rounded-xl border border-slate-700 bg-white/10 px-4 py-3 text-sm text-slate-100 placeholder-slate-400 transition focus:border-slate-400 focus:outline-none">
+                                    <label for="contactName" class="mb-1.5 block text-xs font-bold uppercase tracking-wider text-slate-700">Nama Anda / Perusahaan</label>
+                                    <input type="text" id="contactName" required placeholder="Masukkan nama..." class="w-full rounded-xl border border-white/60 bg-slate-100/70 px-4 py-3 text-sm text-slate-900 placeholder-slate-500 transition focus:border-slate-800 focus:bg-white focus:outline-none">
                                 </div>
                                 <div>
-                                    <label for="contactMessage" class="mb-1 block text-xs font-bold uppercase tracking-wider text-slate-400">Pesan / Project Detail</label>
-                                    <textarea id="contactMessage" rows="3" required placeholder="Jelaskan kebutuhan project Anda..." class="w-full rounded-xl border border-slate-700 bg-white/10 px-4 py-3 text-sm text-slate-100 placeholder-slate-400 transition focus:border-slate-400 focus:outline-none"></textarea>
+                                    <label for="contactMessage" class="mb-1.5 block text-xs font-bold uppercase tracking-wider text-slate-700">Detail Rencana Project</label>
+                                    <textarea id="contactMessage" rows="3" required placeholder="Jelaskan kebutuhan project Anda..." class="w-full rounded-xl border border-white/60 bg-slate-100/70 px-4 py-3 text-sm text-slate-900 placeholder-slate-500 transition focus:border-slate-800 focus:bg-white focus:outline-none"></textarea>
                                 </div>
-                                <button type="submit" class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-slate-100 px-6 py-3.5 text-sm font-black text-slate-950 shadow-lg transition hover:bg-white">
+                                <button type="submit" class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-slate-900 px-6 py-3.5 text-sm font-black text-white shadow-card transition hover:bg-slate-800">
                                     <i data-lucide="message-square" class="h-5 w-5"></i>
-                                    Kirim via WhatsApp (<?= e($profile['phone']); ?>)
+                                    Kirim Pesan WhatsApp Direct (<?= e($profile['phone']); ?>)
                                 </button>
                             </form>
                         </div>
 
-                        <div class="flex flex-col justify-between border-t border-white/10 p-6 sm:p-10 lg:border-l lg:border-t-0">
+                        <div class="flex flex-col justify-between border-t border-white/40 p-6 sm:p-10 lg:border-l lg:border-t-0">
                             <div>
-                                <p class="text-sm font-black text-slate-300">Info Kontak & Media Sosial</p>
+                                <p class="text-sm font-black uppercase tracking-wider text-slate-700">Saluran Komunikasi Resmi</p>
                                 <div class="mt-5 grid gap-3">
-                                    <a href="tel:<?= e($profile['phone_raw']); ?>" class="flex items-center justify-between rounded-xl border border-slate-700 bg-white/5 p-4 font-bold text-slate-100 transition hover:bg-white/10">
+                                    <a href="https://wa.me/6285815707390" target="_blank" rel="noopener" class="flex items-center justify-between rounded-2xl border border-white/60 bg-slate-100/60 p-4 font-bold text-slate-900 transition hover:bg-white/80">
                                         <span class="flex items-center gap-3">
-                                            <i data-lucide="phone-call" class="h-5 w-5 text-slate-300"></i>
-                                            <?= e($profile['phone']); ?>
+                                            <span class="grid h-10 w-10 place-items-center rounded-xl bg-emerald-500 text-white shadow-sm">
+                                                <i data-lucide="message-square" class="h-5 w-5"></i>
+                                            </span>
+                                            <div>
+                                                <p class="text-xs text-slate-600 font-normal">WhatsApp Response</p>
+                                                <p class="text-sm font-black text-slate-950"><?= e($profile['phone']); ?></p>
+                                            </div>
                                         </span>
-                                        <i data-lucide="arrow-up-right" class="h-4 w-4 text-slate-300"></i>
+                                        <i data-lucide="arrow-up-right" class="h-5 w-5 text-slate-700"></i>
                                     </a>
 
-                                    <a href="mailto:<?= e($profile['email']); ?>" class="flex items-center justify-between rounded-xl border border-slate-700 bg-white/5 p-4 font-bold text-slate-100 transition hover:bg-white/10">
+                                    <a href="mailto:<?= e($profile['email']); ?>" class="flex items-center justify-between rounded-2xl border border-white/60 bg-slate-100/60 p-4 font-bold text-slate-900 transition hover:bg-white/80">
                                         <span class="flex items-center gap-3">
-                                            <i data-lucide="mail" class="h-5 w-5 text-slate-300"></i>
-                                            <?= e($profile['email']); ?>
+                                            <span class="grid h-10 w-10 place-items-center rounded-xl bg-slate-900 text-white shadow-sm">
+                                                <i data-lucide="mail" class="h-5 w-5"></i>
+                                            </span>
+                                            <div>
+                                                <p class="text-xs text-slate-600 font-normal">Email Resmi</p>
+                                                <p class="text-sm font-black text-slate-950"><?= e($profile['email']); ?></p>
+                                            </div>
                                         </span>
-                                        <i data-lucide="arrow-up-right" class="h-4 w-4 text-slate-300"></i>
+                                        <i data-lucide="arrow-up-right" class="h-5 w-5 text-slate-700"></i>
                                     </a>
 
                                     <?php foreach($profile['socials'] as $social): ?>
                                         <?php if($social['icon'] !== 'mail' && $social['icon'] !== 'phone'): ?>
                                             <?php $brandSvg = brandIcon($social['icon']); ?>
-                                            <a href="<?= e($social['link']); ?>" target="_blank" rel="noopener" class="flex items-center justify-between rounded-xl border border-slate-700 bg-white/5 p-4 font-bold text-slate-100 transition hover:bg-white/10">
+                                            <a href="<?= e($social['link']); ?>" target="_blank" rel="noopener" class="flex items-center justify-between rounded-2xl border border-white/60 bg-slate-100/60 p-4 font-bold text-slate-900 transition hover:bg-white/80">
                                                 <span class="flex items-center gap-3">
-                                                    <?php if($brandSvg): ?>
-                                                        <?= $brandSvg; ?>
-                                                    <?php else: ?>
-                                                        <i data-lucide="<?= e($social['icon']); ?>" class="h-5 w-5"></i>
-                                                    <?php endif; ?>
-                                                    <?= e($social['label']); ?>
+                                                    <span class="grid h-10 w-10 place-items-center rounded-xl bg-slate-800 text-white shadow-sm">
+                                                        <?php if($brandSvg): ?>
+                                                            <?= $brandSvg; ?>
+                                                        <?php else: ?>
+                                                            <i data-lucide="<?= e($social['icon']); ?>" class="h-5 w-5"></i>
+                                                        <?php endif; ?>
+                                                    </span>
+                                                    <div>
+                                                        <p class="text-xs text-slate-600 font-normal"><?= e($social['label']); ?></p>
+                                                        <p class="text-sm font-black text-slate-950"><?= e($profile['name']); ?></p>
+                                                    </div>
                                                 </span>
-                                                <i data-lucide="arrow-up-right" class="h-4 w-4 text-slate-300"></i>
+                                                <i data-lucide="arrow-up-right" class="h-5 w-5 text-slate-700"></i>
                                             </a>
                                         <?php endif; ?>
                                     <?php endforeach; ?>
                                 </div>
                             </div>
 
-                            <a href="#home" class="mt-8 inline-flex items-center justify-center gap-2 rounded-xl border border-slate-700 px-5 py-3 text-sm font-black text-slate-100 transition hover:bg-white/10">
+                            <a href="#home" data-tab="home" class="nav-tab mt-8 inline-flex items-center justify-center gap-2 rounded-xl border border-white/60 bg-slate-100/60 px-5 py-3 text-sm font-black text-slate-900 transition hover:bg-white">
                                 <i data-lucide="arrow-up" class="h-4 w-4"></i>
-                                Kembali ke atas
+                                Kembali ke Beranda
                             </a>
                         </div>
                     </div>
