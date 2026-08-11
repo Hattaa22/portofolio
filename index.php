@@ -349,34 +349,34 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
 <body class="text-slate-900 antialiased">
     <header class="fixed inset-x-0 top-0 z-50">
         <div class="mx-auto max-w-7xl px-4 pt-4">
-            <div class="rounded-2xl border border-slate-700/60 bg-slate-900/80 px-4 py-3 shadow-glass backdrop-blur-md">
+            <div class="rounded-2xl border border-white/60 bg-slate-200/50 px-4 py-3 shadow-glass backdrop-blur-md">
                 <div class="flex items-center justify-between gap-4">
                     <a href="#home" class="flex min-w-0 items-center gap-3" aria-label="<?= e($profile['name']); ?>">
-                        <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-slate-800 border border-slate-700 font-black text-slate-100 shadow-inner">S</span>
-                        <span class="truncate font-black text-slate-100"><?= e($profile['name']); ?></span>
+                        <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-slate-900 font-black text-white shadow-sm">S</span>
+                        <span class="truncate font-black text-slate-900"><?= e($profile['name']); ?></span>
                     </a>
 
-                    <nav class="hidden items-center gap-1 text-sm font-semibold text-slate-300 md:flex">
-                        <a href="#home" class="nav-tab rounded-xl px-4 py-2 transition hover:bg-slate-800 hover:text-white data-[active=true]:bg-slate-800 data-[active=true]:text-white data-[active=true]:border data-[active=true]:border-slate-700" data-tab="home" data-active="true">Beranda</a>
-                        <a href="#about" class="nav-tab rounded-xl px-4 py-2 transition hover:bg-slate-800 hover:text-white data-[active=true]:bg-slate-800 data-[active=true]:text-white data-[active=true]:border data-[active=true]:border-slate-700" data-tab="about" data-active="false">Tentang</a>
-                        <a href="#skills" class="nav-tab rounded-xl px-4 py-2 transition hover:bg-slate-800 hover:text-white data-[active=true]:bg-slate-800 data-[active=true]:text-white data-[active=true]:border data-[active=true]:border-slate-700" data-tab="skills" data-active="false">Skill</a>
-                        <a href="#projects" class="nav-tab rounded-xl px-4 py-2 transition hover:bg-slate-800 hover:text-white data-[active=true]:bg-slate-800 data-[active=true]:text-white data-[active=true]:border data-[active=true]:border-slate-700" data-tab="projects" data-active="false">Project</a>
-                        <a href="#contact" class="nav-tab rounded-xl px-4 py-2 transition hover:bg-slate-800 hover:text-white data-[active=true]:bg-slate-800 data-[active=true]:text-white data-[active=true]:border data-[active=true]:border-slate-700" data-tab="contact" data-active="false">Kontak</a>
+                    <nav class="hidden items-center gap-1 text-sm font-semibold text-slate-800 md:flex">
+                        <a href="#home" class="nav-tab rounded-xl px-4 py-2 transition hover:bg-slate-300/60 hover:text-slate-950 data-[active=true]:bg-slate-900 data-[active=true]:text-white" data-tab="home" data-active="true">Beranda</a>
+                        <a href="#about" class="nav-tab rounded-xl px-4 py-2 transition hover:bg-slate-300/60 hover:text-slate-950 data-[active=true]:bg-slate-900 data-[active=true]:text-white" data-tab="about" data-active="false">Tentang</a>
+                        <a href="#skills" class="nav-tab rounded-xl px-4 py-2 transition hover:bg-slate-300/60 hover:text-slate-950 data-[active=true]:bg-slate-900 data-[active=true]:text-white" data-tab="skills" data-active="false">Skill</a>
+                        <a href="#projects" class="nav-tab rounded-xl px-4 py-2 transition hover:bg-slate-300/60 hover:text-slate-950 data-[active=true]:bg-slate-900 data-[active=true]:text-white" data-tab="projects" data-active="false">Project</a>
+                        <a href="#contact" class="nav-tab rounded-xl px-4 py-2 transition hover:bg-slate-300/60 hover:text-slate-950 data-[active=true]:bg-slate-900 data-[active=true]:text-white" data-tab="contact" data-active="false">Kontak</a>
                     </nav>
 
-                    <a href="#contact" data-tab="contact" class="nav-tab hidden rounded-xl bg-slate-100 px-5 py-2.5 text-sm font-bold text-slate-950 transition hover:bg-white sm:inline-flex">Hubungi</a>
+                    <a href="#contact" data-tab="contact" class="nav-tab hidden rounded-xl bg-slate-900 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-slate-800 sm:inline-flex">Hubungi</a>
 
-                    <button id="menuBtn" class="grid h-10 w-10 place-items-center rounded-xl border border-slate-700 text-slate-200 md:hidden" aria-label="Buka menu" aria-expanded="false">
+                    <button id="menuBtn" class="grid h-10 w-10 place-items-center rounded-xl border border-slate-400 text-slate-900 md:hidden" aria-label="Buka menu" aria-expanded="false">
                         <i data-lucide="menu" class="h-5 w-5"></i>
                     </button>
                 </div>
 
-                <nav id="mobileMenu" class="mt-3 hidden border-t border-slate-800 pt-3 text-sm font-semibold text-slate-300 md:hidden">
-                    <a href="#home" data-tab="home" class="nav-tab block rounded-xl px-3 py-2 hover:bg-slate-800 hover:text-white">Beranda</a>
-                    <a href="#about" data-tab="about" class="nav-tab block rounded-xl px-3 py-2 hover:bg-slate-800 hover:text-white">Tentang</a>
-                    <a href="#skills" data-tab="skills" class="nav-tab block rounded-xl px-3 py-2 hover:bg-slate-800 hover:text-white">Skill</a>
-                    <a href="#projects" data-tab="projects" class="nav-tab block rounded-xl px-3 py-2 hover:bg-slate-800 hover:text-white">Project</a>
-                    <a href="#contact" data-tab="contact" class="nav-tab block rounded-xl px-3 py-2 hover:bg-slate-800 hover:text-white">Kontak</a>
+                <nav id="mobileMenu" class="mt-3 hidden border-t border-slate-300/80 pt-3 text-sm font-semibold text-slate-800 md:hidden">
+                    <a href="#home" data-tab="home" class="nav-tab block rounded-xl px-3 py-2 hover:bg-slate-300/60">Beranda</a>
+                    <a href="#about" data-tab="about" class="nav-tab block rounded-xl px-3 py-2 hover:bg-slate-300/60">Tentang</a>
+                    <a href="#skills" data-tab="skills" class="nav-tab block rounded-xl px-3 py-2 hover:bg-slate-300/60">Skill</a>
+                    <a href="#projects" data-tab="projects" class="nav-tab block rounded-xl px-3 py-2 hover:bg-slate-300/60">Project</a>
+                    <a href="#contact" data-tab="contact" class="nav-tab block rounded-xl px-3 py-2 hover:bg-slate-300/60">Kontak</a>
                 </nav>
             </div>
         </div>
@@ -386,23 +386,23 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
         <section id="home" class="page-section hero-bg px-4">
             <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.02fr_.98fr] lg:items-center">
                 <div class="fade-slide">
-                    <div class="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-900/80 px-4 py-2 text-sm font-bold text-slate-300 shadow-sm backdrop-blur">
-                        <span class="h-2 w-2 rounded-full bg-slate-400"></span>
+                    <div class="inline-flex items-center gap-2 rounded-full border border-white/60 bg-slate-200/60 px-4 py-2 text-sm font-bold text-slate-900 shadow-sm backdrop-blur">
+                        <span class="h-2 w-2 rounded-full bg-slate-700"></span>
                         <?= e($profile['eyebrow']); ?>
                     </div>
 
-                    <h1 class="mt-7 max-w-4xl text-4xl font-black leading-tight text-white sm:text-6xl">
+                    <h1 class="mt-7 max-w-4xl text-4xl font-black leading-tight text-slate-950 sm:text-6xl">
                         Portofolio <span class="name-text"><?= e($profile['name']); ?></span>.
                     </h1>
-                    <p class="mt-5 max-w-2xl text-xl font-bold text-slate-200"><?= e($profile['role']); ?></p>
-                    <p class="mt-4 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg"><?= e($profile['tagline']); ?></p>
+                    <p class="mt-5 max-w-2xl text-xl font-bold text-slate-900"><?= e($profile['role']); ?></p>
+                    <p class="mt-4 max-w-2xl text-base leading-7 text-slate-800 sm:text-lg"><?= e($profile['tagline']); ?></p>
 
                     <div class="mt-8 flex flex-wrap gap-3">
-                        <a href="#projects" data-tab="projects" class="nav-tab inline-flex items-center justify-center gap-2 rounded-xl bg-slate-100 px-6 py-3.5 text-sm font-bold text-slate-950 shadow-card transition hover:-translate-y-0.5 hover:bg-white">
+                        <a href="#projects" data-tab="projects" class="nav-tab inline-flex items-center justify-center gap-2 rounded-xl bg-slate-900 px-6 py-3.5 text-sm font-bold text-white shadow-card transition hover:-translate-y-0.5 hover:bg-slate-800">
                             <i data-lucide="briefcase-business" class="h-5 w-5"></i>
                             Lihat Project
                         </a>
-                        <a href="<?= e($profile['whatsapp']); ?>" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-700 bg-slate-900/80 px-5 py-3.5 text-sm font-bold text-slate-200 transition hover:-translate-y-0.5 hover:bg-slate-800">
+                        <a href="<?= e($profile['whatsapp']); ?>" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 rounded-xl border border-white/60 bg-slate-200/60 px-5 py-3.5 text-sm font-bold text-slate-900 transition hover:-translate-y-0.5 hover:bg-slate-200/90 backdrop-blur">
                             <i data-lucide="message-square" class="h-5 w-5"></i>
                             Chat WhatsApp
                         </a>
@@ -410,43 +410,43 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
 
                     <div class="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-3">
                         <?php foreach($profile['stats'] as $stat): ?>
-                            <div class="rounded-2xl border border-slate-700/70 bg-slate-900/80 p-4 shadow-card backdrop-blur">
+                            <div class="rounded-2xl border border-white/60 bg-slate-200/50 p-4 shadow-card backdrop-blur-md">
                                 <div class="flex items-center justify-between gap-3">
-                                    <span class="text-2xl font-black text-white"><?= e($stat['value']); ?></span>
-                                    <span class="grid h-10 w-10 place-items-center rounded-xl bg-slate-800 border border-slate-700 text-slate-300">
+                                    <span class="text-2xl font-black text-slate-950"><?= e($stat['value']); ?></span>
+                                    <span class="grid h-10 w-10 place-items-center rounded-xl bg-slate-300/60 border border-white/60 text-slate-900">
                                         <i data-lucide="<?= e($stat['icon']); ?>" class="h-5 w-5"></i>
                                     </span>
                                 </div>
-                                <p class="mt-2 text-xs font-bold uppercase tracking-wide text-slate-400"><?= e($stat['label']); ?></p>
+                                <p class="mt-2 text-xs font-bold uppercase tracking-wide text-slate-700"><?= e($stat['label']); ?></p>
                             </div>
                         <?php endforeach; ?>
                     </div>
                 </div>
 
                 <div class="fade-slide">
-                    <div class="overflow-hidden rounded-3xl border border-slate-700/70 bg-slate-900/85 shadow-glass backdrop-blur-md">
+                    <div class="overflow-hidden rounded-3xl border border-white/60 bg-slate-200/55 shadow-glass backdrop-blur-md">
                         <div class="accent-line h-2"></div>
                         <div class="portfolio-grid p-5 sm:p-6">
-                            <div class="rounded-2xl border border-slate-700/70 bg-slate-950/70 p-5 shadow-card">
+                            <div class="rounded-2xl border border-white/60 bg-slate-100/60 p-5 shadow-card backdrop-blur">
                                 <div class="flex items-start justify-between gap-4">
                                     <div>
-                                        <p class="text-sm font-black uppercase tracking-[.18em] text-slate-400">2026 Portfolio</p>
-                                        <h2 class="mt-2 text-3xl font-black text-white"><?= e($profile['name']); ?></h2>
+                                        <p class="text-sm font-black uppercase tracking-[.18em] text-slate-700">2026 Portfolio</p>
+                                        <h2 class="mt-2 text-3xl font-black text-slate-950"><?= e($profile['name']); ?></h2>
                                     </div>
-                                    <div class="grid h-14 w-14 place-items-center rounded-2xl bg-slate-800 border border-slate-700 text-slate-100">
+                                    <div class="grid h-14 w-14 place-items-center rounded-2xl bg-slate-900 text-white">
                                         <i data-lucide="code-2" class="h-7 w-7"></i>
                                     </div>
                                 </div>
-                                <p class="mt-5 text-sm leading-6 text-slate-300"><?= e($profile['bio']); ?></p>
+                                <p class="mt-5 text-sm leading-6 text-slate-800"><?= e($profile['bio']); ?></p>
                             </div>
 
                             <div class="mt-4 grid gap-4 sm:grid-cols-2">
                                 <?php foreach($profile['education'] as $edu): ?>
-                                    <div class="rounded-2xl border border-slate-700/70 bg-slate-950/70 p-4 shadow-card">
-                                        <i data-lucide="graduation-cap" class="h-5 w-5 text-slate-400"></i>
-                                        <p class="mt-3 text-sm font-black text-white"><?= e($edu['school']); ?></p>
-                                        <p class="mt-1 text-xs font-bold text-slate-400"><?= e($edu['period']); ?></p>
-                                        <p class="mt-2 text-sm text-slate-300"><?= e($edu['major']); ?></p>
+                                    <div class="rounded-2xl border border-white/60 bg-slate-100/60 p-4 shadow-card backdrop-blur">
+                                        <i data-lucide="graduation-cap" class="h-5 w-5 text-slate-800"></i>
+                                        <p class="mt-3 text-sm font-black text-slate-950"><?= e($edu['school']); ?></p>
+                                        <p class="mt-1 text-xs font-bold text-slate-700"><?= e($edu['period']); ?></p>
+                                        <p class="mt-2 text-sm text-slate-800"><?= e($edu['major']); ?></p>
                                     </div>
                                 <?php endforeach; ?>
                             </div>
@@ -459,24 +459,24 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
         <section id="about" class="page-section px-4">
             <div class="mx-auto max-w-7xl">
                 <!-- Header Banner -->
-                <div class="overflow-hidden rounded-3xl border border-slate-700/60 bg-slate-900/80 p-8 shadow-glass backdrop-blur-md">
+                <div class="overflow-hidden rounded-3xl border border-white/60 bg-slate-200/50 p-8 shadow-glass backdrop-blur-md">
                     <div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
                         <div class="max-w-2xl">
-                            <div class="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-800/90 px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider text-slate-300">
-                                <span class="h-2 w-2 rounded-full bg-slate-400"></span>
+                            <div class="inline-flex items-center gap-2 rounded-full border border-white/60 bg-slate-300/50 px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider text-slate-800">
+                                <span class="h-2 w-2 rounded-full bg-slate-700"></span>
                                 Profile & Experience
                             </div>
-                            <h2 class="mt-4 text-3xl font-black leading-tight text-white sm:text-4xl">Fokus pada Solusi Digital yang Efisien & Inovatif.</h2>
-                            <p class="mt-3 text-base leading-relaxed text-slate-300 sm:text-lg">Pengalaman membangun ekosistem digital kampus, aplikasi mobile koperasi, absensi PWA, company profile berteknologi modern, dan perapihan antarmuka pengguna (UI/UX).</p>
+                            <h2 class="mt-4 text-3xl font-black leading-tight text-slate-950 sm:text-4xl">Fokus pada Solusi Digital yang Efisien & Inovatif.</h2>
+                            <p class="mt-3 text-base leading-relaxed text-slate-800 sm:text-lg">Pengalaman membangun ekosistem digital kampus, aplikasi mobile koperasi, absensi PWA, company profile berteknologi modern, dan perapihan antarmuka pengguna (UI/UX).</p>
                         </div>
                         <div class="grid grid-cols-2 gap-4 lg:w-72 shrink-0">
-                            <div class="rounded-2xl border border-slate-700/80 bg-slate-800/80 p-4 text-center">
-                                <p class="text-3xl font-black text-white">4+</p>
-                                <p class="mt-1 text-xs font-bold uppercase tracking-wider text-slate-400">Tahun Pengalaman</p>
+                            <div class="rounded-2xl border border-white/60 bg-slate-300/50 p-4 text-center backdrop-blur">
+                                <p class="text-3xl font-black text-slate-950">4+</p>
+                                <p class="mt-1 text-xs font-bold uppercase tracking-wider text-slate-700">Tahun Pengalaman</p>
                             </div>
-                            <div class="rounded-2xl border border-slate-700/80 bg-slate-800/80 p-4 text-center">
-                                <p class="text-3xl font-black text-white">100%</p>
-                                <p class="mt-1 text-xs font-bold uppercase tracking-wider text-slate-400">Dedikasi Performa</p>
+                            <div class="rounded-2xl border border-white/60 bg-slate-300/50 p-4 text-center backdrop-blur">
+                                <p class="text-3xl font-black text-slate-950">100%</p>
+                                <p class="mt-1 text-xs font-bold uppercase tracking-wider text-slate-700">Dedikasi Performa</p>
                             </div>
                         </div>
                     </div>
@@ -485,37 +485,37 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
                 <!-- Services Grid -->
                 <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
                     <?php foreach($profile['services'] as $index => $service): ?>
-                        <article class="fade-slide rounded-3xl border border-slate-700/60 bg-slate-900/80 p-6 shadow-card backdrop-blur-md transition hover:-translate-y-1.5 hover:border-slate-500 hover:bg-slate-850">
+                        <article class="fade-slide rounded-3xl border border-white/60 bg-slate-200/50 p-6 shadow-card backdrop-blur-md transition hover:-translate-y-1.5 hover:bg-slate-200/75">
                             <div class="flex items-center justify-between">
-                                <div class="grid h-12 w-12 place-items-center rounded-2xl bg-slate-800 border border-slate-700 text-slate-100 shadow-inner">
+                                <div class="grid h-12 w-12 place-items-center rounded-2xl bg-slate-300/60 border border-white/60 text-slate-950 shadow-inner">
                                     <i data-lucide="<?= e($service['icon']); ?>" class="h-6 w-6"></i>
                                 </div>
-                                <span class="text-xs font-black tracking-widest text-slate-400">0<?= $index + 1; ?></span>
+                                <span class="text-xs font-black tracking-widest text-slate-700">0<?= $index + 1; ?></span>
                             </div>
-                            <h3 class="mt-6 text-xl font-black text-white"><?= e($service['title']); ?></h3>
-                            <p class="mt-3 text-sm leading-6 text-slate-300"><?= e($service['desc']); ?></p>
+                            <h3 class="mt-6 text-xl font-black text-slate-950"><?= e($service['title']); ?></h3>
+                            <p class="mt-3 text-sm leading-6 text-slate-800"><?= e($service['desc']); ?></p>
                         </article>
                     <?php endforeach; ?>
                 </div>
             </div>
         </section>
 
-        <section id="skills" class="page-section border-y border-slate-700/50 bg-slate-950/40 px-4 backdrop-blur">
+        <section id="skills" class="page-section border-y border-white/40 bg-slate-200/40 px-4 backdrop-blur">
             <div class="mx-auto max-w-7xl">
                 <div class="fade-slide flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
                     <div>
-                        <p class="text-sm font-black uppercase tracking-[.2em] text-slate-400">Personal Skill</p>
-                        <h2 class="mt-3 text-3xl font-black text-white sm:text-4xl">Tech stack dari PDF portofolio.</h2>
+                        <p class="text-sm font-black uppercase tracking-[.2em] text-slate-700">Personal Skill</p>
+                        <h2 class="mt-3 text-3xl font-black text-slate-950 sm:text-4xl">Tech stack dari PDF portofolio.</h2>
                     </div>
-                    <p class="max-w-md text-slate-300">Skill yang digunakan untuk membangun frontend, backend, aplikasi mobile, integrasi API, dan database.</p>
+                    <p class="max-w-md text-slate-800">Skill yang digunakan untuk membangun frontend, backend, aplikasi mobile, integrasi API, dan database.</p>
                 </div>
 
                 <div class="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
                     <?php foreach($profile['skills'] as $skill): ?>
-                        <div class="fade-slide rounded-2xl border border-slate-700/70 bg-slate-900/80 p-4 transition hover:-translate-y-1 hover:border-slate-500 hover:bg-slate-800 shadow-card">
-                            <i data-lucide="<?= e($skill['icon']); ?>" class="h-6 w-6 text-slate-300"></i>
-                            <p class="mt-5 font-black text-slate-100"><?= e($skill['name']); ?></p>
-                            <p class="mt-1 text-xs font-bold uppercase tracking-wide text-slate-400"><?= e($skill['cat']); ?></p>
+                        <div class="fade-slide rounded-2xl border border-white/60 bg-slate-200/50 p-4 transition hover:-translate-y-1 hover:bg-slate-200/80 shadow-card backdrop-blur">
+                            <i data-lucide="<?= e($skill['icon']); ?>" class="h-6 w-6 text-slate-900"></i>
+                            <p class="mt-5 font-black text-slate-950"><?= e($skill['name']); ?></p>
+                            <p class="mt-1 text-xs font-bold uppercase tracking-wide text-slate-700"><?= e($skill['cat']); ?></p>
                         </div>
                     <?php endforeach; ?>
                 </div>
@@ -526,13 +526,13 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
             <div class="mx-auto max-w-7xl">
                 <div class="fade-slide flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
                     <div>
-                        <p class="text-sm font-black uppercase tracking-[.2em] text-slate-400">Pencapaian Project</p>
-                        <h2 class="mt-3 text-3xl font-black text-white sm:text-4xl">Project lengkap dari portofolio.</h2>
-                        <p class="mt-2 max-w-2xl text-slate-300">Daftar ini menggabungkan project dari PDF dan project live yang sudah ada di website.</p>
+                        <p class="text-sm font-black uppercase tracking-[.2em] text-slate-700">Pencapaian Project</p>
+                        <h2 class="mt-3 text-3xl font-black text-slate-950 sm:text-4xl">Project lengkap dari portofolio.</h2>
+                        <p class="mt-2 max-w-2xl text-slate-800">Daftar ini menggabungkan project dari PDF dan project live yang sudah ada di website.</p>
                     </div>
                     <div class="flex flex-wrap gap-2" aria-label="Filter project">
                         <?php foreach($projectFilters as $filter): ?>
-                            <button type="button" class="filter-btn rounded-xl border border-slate-700/80 bg-slate-900/80 px-4 py-2 text-sm font-black text-slate-300 transition hover:border-slate-500 hover:text-white data-[active=true]:bg-slate-100 data-[active=true]:text-slate-950" data-filter="<?= e($filter); ?>" data-active="<?= $filter === 'All' ? 'true' : 'false'; ?>">
+                            <button type="button" class="filter-btn rounded-xl border border-white/60 bg-slate-200/50 px-4 py-2 text-sm font-black text-slate-800 transition hover:bg-slate-300/60 data-[active=true]:bg-slate-900 data-[active=true]:text-white" data-filter="<?= e($filter); ?>" data-active="<?= $filter === 'All' ? 'true' : 'false'; ?>">
                                 <?= e($filter); ?>
                             </button>
                         <?php endforeach; ?>
@@ -544,58 +544,58 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
                         <?php $accent = projectAccent($project['accent']); ?>
                         <?php $isLive = !empty($project['link']); ?>
                         <?php $images = $project['images'] ?? []; ?>
-                        <article class="project-card fade-slide overflow-hidden rounded-3xl border border-slate-700/70 bg-slate-900/85 shadow-card backdrop-blur transition hover:-translate-y-1 hover:border-slate-500" data-type="<?= e($project['type']); ?>">
-                            <div class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-850 p-3 text-slate-100 sm:p-5">
+                        <article class="project-card fade-slide overflow-hidden rounded-3xl border border-white/60 bg-slate-200/50 shadow-card backdrop-blur-md transition hover:-translate-y-1 hover:bg-slate-200/70" data-type="<?= e($project['type']); ?>">
+                            <div class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 p-3 text-slate-100 sm:p-5">
                                 <div class="mb-3 flex items-center justify-between gap-4">
-                                    <span class="rounded-full bg-slate-800/90 border border-slate-700 px-3 py-1 text-xs font-black text-slate-200"><?= e($project['type']); ?></span>
-                                    <span class="grid h-9 w-9 place-items-center rounded-xl bg-slate-800 border border-slate-700">
-                                        <i data-lucide="<?= e($project['icon']); ?>" class="h-5 w-5 text-slate-200"></i>
+                                    <span class="rounded-full bg-white/20 px-3 py-1 text-xs font-black"><?= e($project['type']); ?></span>
+                                    <span class="grid h-9 w-9 place-items-center rounded-xl bg-white/16">
+                                        <i data-lucide="<?= e($project['icon']); ?>" class="h-5 w-5 text-white"></i>
                                     </span>
                                 </div>
                                 <?php if(!empty($images)): ?>
-                                    <a href="<?= e($images[0]['src']); ?>" target="_blank" rel="noopener" class="project-visual overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/90 shadow-sm transition hover:border-slate-700">
+                                    <a href="<?= e($images[0]['src']); ?>" target="_blank" rel="noopener" class="project-visual overflow-hidden rounded-2xl border border-white/20 bg-slate-100/95 shadow-sm transition hover:bg-slate-50">
                                         <img src="<?= e($images[0]['src']); ?>" alt="<?= e($images[0]['alt']); ?>" loading="lazy">
                                     </a>
                                     <?php if(count($images) > 1): ?>
                                         <div class="mt-3 grid grid-cols-3 gap-2">
                                             <?php foreach(array_slice($images, 1, 3) as $image): ?>
-                                                <a href="<?= e($image['src']); ?>" target="_blank" rel="noopener" class="project-thumb overflow-hidden rounded-xl border border-slate-800 bg-slate-950/80 transition hover:border-slate-700">
+                                                <a href="<?= e($image['src']); ?>" target="_blank" rel="noopener" class="project-thumb overflow-hidden rounded-xl border border-white/20 bg-slate-100/90 transition hover:bg-slate-50">
                                                     <img src="<?= e($image['src']); ?>" alt="<?= e($image['alt']); ?>" loading="lazy">
                                                 </a>
                                             <?php endforeach; ?>
                                         </div>
                                     <?php endif; ?>
                                 <?php else: ?>
-                                    <div class="rounded-2xl bg-slate-950/80 p-4 ring-1 ring-slate-800">
+                                    <div class="rounded-2xl bg-white/14 p-4 ring-1 ring-white/20">
                                         <div class="mb-3 flex items-center gap-2">
-                                            <span class="h-2.5 w-2.5 rounded-full bg-slate-600"></span>
-                                            <span class="h-2.5 w-2.5 rounded-full bg-slate-700"></span>
-                                            <span class="h-2.5 w-2.5 rounded-full bg-slate-800"></span>
+                                            <span class="h-2.5 w-2.5 rounded-full bg-slate-300"></span>
+                                            <span class="h-2.5 w-2.5 rounded-full bg-slate-400"></span>
+                                            <span class="h-2.5 w-2.5 rounded-full bg-slate-500"></span>
                                         </div>
-                                        <span class="block h-16 rounded-xl bg-slate-900 border border-slate-800"></span>
-                                        <span class="mt-3 block h-2.5 w-11/12 rounded-full bg-slate-800"></span>
-                                        <span class="mt-2 block h-2.5 w-7/12 rounded-full bg-slate-800"></span>
+                                        <span class="block h-16 rounded-xl bg-white/28"></span>
+                                        <span class="mt-3 block h-2.5 w-11/12 rounded-full bg-white/35"></span>
+                                        <span class="mt-2 block h-2.5 w-7/12 rounded-full bg-white/25"></span>
                                     </div>
                                 <?php endif; ?>
                             </div>
 
                             <div class="p-5">
                                 <div class="flex items-start justify-between gap-3">
-                                    <h3 class="text-xl font-black leading-tight text-white"><?= e($project['title']); ?></h3>
-                                    <span class="shrink-0 rounded-full bg-slate-800 border border-slate-700 px-3 py-1 text-xs font-black text-slate-200"><?= e($project['role']); ?></span>
+                                    <h3 class="text-xl font-black leading-tight text-slate-950"><?= e($project['title']); ?></h3>
+                                    <span class="shrink-0 rounded-full bg-slate-300/80 px-3 py-1 text-xs font-black text-slate-900"><?= e($project['role']); ?></span>
                                 </div>
-                                <p class="mt-4 text-sm leading-6 text-slate-300"><?= e($project['desc']); ?></p>
-                                <div class="mt-4 rounded-2xl border border-slate-700/70 bg-slate-950/70 p-4">
-                                    <p class="text-xs font-black uppercase tracking-wide text-slate-400">Kontribusi</p>
-                                    <p class="mt-2 text-sm leading-6 text-slate-300"><?= e($project['contribution']); ?></p>
+                                <p class="mt-4 text-sm leading-6 text-slate-800"><?= e($project['desc']); ?></p>
+                                <div class="mt-4 rounded-2xl border border-white/60 bg-slate-100/60 p-4">
+                                    <p class="text-xs font-black uppercase tracking-wide text-slate-700">Kontribusi</p>
+                                    <p class="mt-2 text-sm leading-6 text-slate-900"><?= e($project['contribution']); ?></p>
                                 </div>
                                 <div class="mt-5 flex flex-wrap gap-2">
                                     <?php foreach($project['stack'] as $stack): ?>
-                                        <span class="rounded-full bg-slate-800 border border-slate-700 px-3 py-1 text-xs font-bold text-slate-300"><?= e($stack); ?></span>
+                                        <span class="rounded-full bg-slate-300/80 border border-white/60 px-3 py-1 text-xs font-bold text-slate-900"><?= e($stack); ?></span>
                                     <?php endforeach; ?>
                                 </div>
                                 <?php if($isLive): ?>
-                                    <a href="<?= e($project['link']); ?>" target="_blank" rel="noopener" class="mt-6 inline-flex items-center gap-2 text-sm font-black text-slate-200 hover:text-white hover:underline">
+                                    <a href="<?= e($project['link']); ?>" target="_blank" rel="noopener" class="mt-6 inline-flex items-center gap-2 text-sm font-black text-slate-950 hover:text-black hover:underline">
                                         Lihat web live
                                         <i data-lucide="external-link" class="h-4 w-4"></i>
                                     </a>
