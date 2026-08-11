@@ -228,8 +228,9 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
                     },
                     boxShadow: {
                         glass: '0 20px 40px rgba(12, 18, 29, .25)',
-                        card: '0 12px 30px rgba(12, 18, 29, .2)',
-                        glow: '0 0 30px rgba(180, 195, 212, .25)'
+                        card: '0 12px 30px rgba(12, 18, 29, .18)',
+                        glow: '0 0 30px rgba(180, 195, 212, .3)',
+                        hoverCard: '0 20px 40px rgba(12, 18, 29, .28)'
                     }
                 }
             }
@@ -287,6 +288,17 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
                 linear-gradient(rgba(30, 45, 65, .08) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(30, 45, 65, .08) 1px, transparent 1px);
             background-size: 32px 32px;
+        }
+        .glass-card {
+            background: rgba(241, 245, 249, 0.88);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .glass-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 20px 40px rgba(12, 18, 29, 0.22);
         }
         .project-card.is-hidden {
             display: none;
@@ -386,11 +398,11 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
                     <p class="mt-4 max-w-2xl text-base leading-7 text-slate-800 sm:text-lg"><?= e($profile['tagline']); ?></p>
 
                     <div class="mt-8 flex flex-wrap gap-3">
-                        <a href="#projects" class="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-900 px-6 py-3.5 text-sm font-bold text-slate-100 shadow-card transition hover:bg-slate-800">
+                        <a href="#projects" data-tab="projects" class="nav-tab inline-flex items-center justify-center gap-2 rounded-xl bg-slate-900 px-6 py-3.5 text-sm font-bold text-slate-100 shadow-card transition hover:-translate-y-0.5 hover:bg-slate-800">
                             <i data-lucide="briefcase-business" class="h-5 w-5"></i>
                             Lihat Project
                         </a>
-                        <a href="<?= e($profile['whatsapp']); ?>" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-400/80 bg-slate-100/90 px-5 py-3.5 text-sm font-bold text-slate-900 transition hover:bg-slate-200">
+                        <a href="<?= e($profile['whatsapp']); ?>" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-400/80 bg-slate-100/90 px-5 py-3.5 text-sm font-bold text-slate-900 transition hover:-translate-y-0.5 hover:bg-slate-200">
                             <i data-lucide="message-square" class="h-5 w-5"></i>
                             Chat WhatsApp
                         </a>
