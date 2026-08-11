@@ -7,8 +7,6 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 jobs:
   build-and-deploy:
@@ -26,23 +24,17 @@ jobs:
       - name: Start PHP built-in server
         run: |
           php -S 127.0.0.1:8000 index.php >/dev/null 2>&1 &
-          sleep 2
+          sleep 3
 
-      - name: Crawl site to static HTML with wget
+      - name: Crawl site to static HTML
         run: |
-          sudo apt-get update
-          sudo apt-get install -y wget
           mkdir -p ./out
-          wget --mirror --convert-links --adjust-extension --page-requisites --no-parent -e robots=off http://127.0.0.1:8000/ -P ./out
-          if [ -d ./out/127.0.0.1:8000 ]; then
-            shopt -s dotglob || true
-            cp -r ./out/127.0.0.1:8000/* ./out/ || true
-            rm -rf ./out/127.0.0.1:8000 || true
-          fi
+          curl -s http://127.0.0.1:8000/ -o ./out/index.html
+          cp -r assets ./out/assets || true
           touch ./out/.nojekyll
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
