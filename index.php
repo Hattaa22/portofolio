@@ -290,15 +290,15 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
             background-size: 32px 32px;
         }
         .glass-card {
-            background: rgba(241, 245, 249, 0.88);
+            background: rgba(40, 52, 69, 0.45);
             backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(208, 219, 231, 0.25);
             transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .glass-card:hover {
-            transform: translateY(-4px);
-            border-color: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 20px 40px rgba(12, 18, 29, 0.22);
+            transform: translateY(-5px);
+            border-color: rgba(208, 219, 231, 0.45);
+            box-shadow: 0 20px 40px rgba(12, 18, 29, 0.35);
         }
         .project-card.is-hidden {
             display: none;
@@ -457,20 +457,43 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
         </section>
 
         <section id="about" class="page-section px-4">
-            <div class="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[.75fr_1.25fr]">
-                <div class="fade-slide">
-                    <p class="text-sm font-black uppercase tracking-[.2em] text-slate-700">Tentang</p>
-                    <h2 class="mt-3 text-3xl font-black leading-tight text-slate-950 sm:text-4xl">Fokus pada solusi digital yang efisien dan inovatif.</h2>
-                    <p class="mt-4 leading-7 text-slate-800">Pengalaman project mencakup sistem informasi kampus, aplikasi koperasi digital, absensi mobile, PWA operasional bisnis, company profile, dan perapihan UI website.</p>
-                </div>
-                <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                    <?php foreach($profile['services'] as $index => $service): ?>
-                        <article class="fade-slide rounded-2xl border border-slate-300/80 bg-slate-100/90 p-5 shadow-card transition hover:-translate-y-1 hover:bg-slate-50">
-                            <div class="grid h-11 w-11 place-items-center rounded-xl bg-slate-200 border border-slate-300 text-slate-900">
-                                <i data-lucide="<?= e($service['icon']); ?>" class="h-6 w-6"></i>
+            <div class="mx-auto max-w-7xl">
+                <!-- Header Banner -->
+                <div class="overflow-hidden rounded-3xl border border-slate-700/60 bg-slate-900/80 p-8 shadow-glass backdrop-blur-md">
+                    <div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+                        <div class="max-w-2xl">
+                            <div class="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-800/90 px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider text-slate-300">
+                                <span class="h-2 w-2 rounded-full bg-slate-400"></span>
+                                Profile & Experience
                             </div>
-                            <h3 class="mt-5 text-lg font-black text-slate-950"><?= e($service['title']); ?></h3>
-                            <p class="mt-2 text-sm leading-6 text-slate-700"><?= e($service['desc']); ?></p>
+                            <h2 class="mt-4 text-3xl font-black leading-tight text-white sm:text-4xl">Fokus pada Solusi Digital yang Efisien & Inovatif.</h2>
+                            <p class="mt-3 text-base leading-relaxed text-slate-300 sm:text-lg">Pengalaman membangun ekosistem digital kampus, aplikasi mobile koperasi, absensi PWA, company profile berteknologi modern, dan perapihan antarmuka pengguna (UI/UX).</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 lg:w-72 shrink-0">
+                            <div class="rounded-2xl border border-slate-700/80 bg-slate-800/80 p-4 text-center">
+                                <p class="text-3xl font-black text-white">4+</p>
+                                <p class="mt-1 text-xs font-bold uppercase tracking-wider text-slate-400">Tahun Pengalaman</p>
+                            </div>
+                            <div class="rounded-2xl border border-slate-700/80 bg-slate-800/80 p-4 text-center">
+                                <p class="text-3xl font-black text-white">100%</p>
+                                <p class="mt-1 text-xs font-bold uppercase tracking-wider text-slate-400">Dedikasi Performa</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Services Grid -->
+                <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+                    <?php foreach($profile['services'] as $index => $service): ?>
+                        <article class="fade-slide rounded-3xl border border-slate-700/60 bg-slate-900/80 p-6 shadow-card backdrop-blur-md transition hover:-translate-y-1.5 hover:border-slate-500 hover:bg-slate-850">
+                            <div class="flex items-center justify-between">
+                                <div class="grid h-12 w-12 place-items-center rounded-2xl bg-slate-800 border border-slate-700 text-slate-100 shadow-inner">
+                                    <i data-lucide="<?= e($service['icon']); ?>" class="h-6 w-6"></i>
+                                </div>
+                                <span class="text-xs font-black tracking-widest text-slate-400">0<?= $index + 1; ?></span>
+                            </div>
+                            <h3 class="mt-6 text-xl font-black text-white"><?= e($service['title']); ?></h3>
+                            <p class="mt-3 text-sm leading-6 text-slate-300"><?= e($service['desc']); ?></p>
                         </article>
                     <?php endforeach; ?>
                 </div>
