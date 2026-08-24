@@ -10,8 +10,8 @@ $profile = [
     'phone' => '0858 1570 7390',
     'phone_raw' => '085815707390',
     'whatsapp' => 'https://wa.me/6285815707390',
-    'stats' => [
-        ['value' => '8', 'label' => 'Project portofolio', 'icon' => 'folder-kanban', 'color' => 'text-slate-900', 'bg' => 'bg-slate-200/80'],
+'stats' => [
+        ['value' => '10', 'label' => 'Project portofolio', 'icon' => 'folder-kanban', 'color' => 'text-slate-900', 'bg' => 'bg-slate-200/80'],
         ['value' => '11', 'label' => 'Skill teknis', 'icon' => 'badge-check', 'color' => 'text-slate-800', 'bg' => 'bg-slate-200/80'],
         ['value' => '2026', 'label' => 'Portofolio terbaru', 'icon' => 'sparkles', 'color' => 'text-slate-900', 'bg' => 'bg-slate-300/80']
     ],
@@ -32,7 +32,7 @@ $profile = [
         ['name' => 'Postman', 'icon' => 'send', 'cat' => 'Testing'],
         ['name' => 'MySQL', 'icon' => 'database', 'cat' => 'Database']
     ],
-    'projects' => [
+'projects' => [
         [
             'title' => 'Sistem Informasi Survey Kepuasan Pelanggan',
             'type' => 'Web Application',
@@ -146,6 +146,28 @@ $profile = [
                 ['src' => 'assets/projects/rsgc-services.png', 'alt' => 'Halaman layanan RS Galery Candra']
             ],
             'link' => 'https://rumahsakitgalericandra.com/'
+        ],
+        [
+            'title' => 'Shine Web',
+            'type' => 'Web Application',
+            'role' => 'Full Stack Developer',
+            'desc' => 'Aplikasi web berbasis Laravel untuk sistem manajemen dan katalog produk dengan antarmuka modern menggunakan Blade templating.',
+            'contribution' => 'Mengembangkan aplikasi web Laravel dengan fitur-modul yang dapat diperluas dan database yang terstruktur.',
+            'stack' => ['Laravel', 'Blade', 'PHP', 'MySQL'],
+            'icon' => 'globe',
+            'accent' => 'slate',
+            'link' => 'https://github.com/Hattaa22/shine-web'
+        ],
+        [
+            'title' => 'Invoice App',
+            'type' => 'Web Application',
+            'role' => 'Frontend Developer',
+            'desc' => 'Aplikasi invoicing dan pembayaran berbasis modern TypeScript dengan Vite, React, dan shadcn UI.',
+            'contribution' => 'Mengembangkan frontend aplikasi invoice dengan fokus pada pengalaman pengguna dan antarmuka yang responsif.',
+            'stack' => ['TypeScript', 'React', 'Vite', 'shadcn-ui'],
+            'icon' => 'dollar-sign',
+            'accent' => 'emerald',
+            'link' => 'https://github.com/Hattaa22/invoice'
         ]
     ],
     'services' => [
