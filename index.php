@@ -34,6 +34,13 @@ $profile = [
         ['name' => 'Git & GitHub', 'icon' => 'git-branch', 'cat' => 'Workflow', 'desc' => 'Version control, kolaborasi branch, commit, dan deployment repository.'],
         ['name' => 'Postman', 'icon' => 'send', 'cat' => 'Tools', 'desc' => 'Pengujian endpoint, autentikasi, payload, dan response API.']
     ],
+    'soft_skills' => [
+        ['name' => 'Problem Solving', 'icon' => 'lightbulb', 'desc' => 'Memecah kebutuhan dan kendala teknis menjadi solusi yang dapat diuji.'],
+        ['name' => 'Analisis Kebutuhan', 'icon' => 'clipboard-list', 'desc' => 'Memahami alur pengguna dan menerjemahkannya menjadi fitur aplikasi.'],
+        ['name' => 'Kolaborasi Tim', 'icon' => 'users-round', 'desc' => 'Berkoordinasi dengan developer dan stakeholder selama siklus pengembangan.'],
+        ['name' => 'Adaptabilitas', 'icon' => 'refresh-cw', 'desc' => 'Beradaptasi dengan stack, kebutuhan project, dan perubahan prioritas.'],
+        ['name' => 'Komunikasi', 'icon' => 'message-circle', 'desc' => 'Menjelaskan progres, kebutuhan, dan solusi teknis secara terstruktur.']
+    ],
 'projects' => [
         [
             'title' => 'Sistem Informasi Survey Kepuasan Pelanggan',
@@ -588,19 +595,51 @@ $projectFilters = ['All', 'Web Application', 'Web & Mobile Application', 'Mobile
                     <p class="max-w-md text-slate-800">Tools dan teknologi yang pernah digunakan dalam project akademik, magang, dan aplikasi yang sudah berjalan.</p>
                 </div>
 
-                <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-                    <?php foreach($profile['skills'] as $skill): ?>
-                        <div class="fade-slide rounded-2xl border border-white/60 bg-slate-200/55 p-5 transition hover:-translate-y-1.5 hover:bg-slate-200/80 shadow-card backdrop-blur-md">
-                            <div class="flex items-center justify-between">
-                                <span class="grid h-11 w-11 place-items-center rounded-xl bg-slate-900 text-white shadow-sm">
-                                    <i data-lucide="<?= e($skill['icon']); ?>" class="h-5 w-5"></i>
-                                </span>
-                                <span class="rounded-full bg-slate-300/70 border border-white/60 px-3 py-1 text-[11px] font-bold text-slate-900"><?= e($skill['cat']); ?></span>
+                <div class="mt-8 grid gap-8 lg:grid-cols-[1.4fr_.8fr]">
+                    <div>
+                        <div class="mb-4 flex items-center gap-3">
+                            <span class="grid h-10 w-10 place-items-center rounded-xl bg-slate-900 text-white"><i data-lucide="code-2" class="h-5 w-5"></i></span>
+                            <div>
+                                <h3 class="text-xl font-black text-slate-950">Hard Skills</h3>
+                                <p class="text-xs font-semibold text-slate-700">Teknologi yang digunakan dalam project.</p>
                             </div>
-                            <p class="mt-4 text-lg font-black text-slate-950"><?= e($skill['name']); ?></p>
-                            <p class="mt-3 text-xs leading-5 text-slate-700"><?= e($skill['desc']); ?></p>
                         </div>
-                    <?php endforeach; ?>
+                        <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
+                            <?php foreach($profile['skills'] as $skill): ?>
+                                <div class="fade-slide rounded-2xl border border-white/60 bg-slate-200/55 p-5 transition hover:-translate-y-1.5 hover:bg-slate-200/80 shadow-card backdrop-blur-md">
+                                    <div class="flex items-center justify-between gap-2">
+                                        <span class="grid h-11 w-11 place-items-center rounded-xl bg-slate-900 text-white shadow-sm">
+                                            <i data-lucide="<?= e($skill['icon']); ?>" class="h-5 w-5"></i>
+                                        </span>
+                                        <span class="rounded-full bg-slate-300/70 border border-white/60 px-2.5 py-1 text-[10px] font-bold text-slate-900"><?= e($skill['cat']); ?></span>
+                                    </div>
+                                    <p class="mt-4 text-base font-black text-slate-950"><?= e($skill['name']); ?></p>
+                                    <p class="mt-3 text-xs leading-5 text-slate-700"><?= e($skill['desc']); ?></p>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="mb-4 flex items-center gap-3">
+                            <span class="grid h-10 w-10 place-items-center rounded-xl bg-slate-700 text-white"><i data-lucide="users" class="h-5 w-5"></i></span>
+                            <div>
+                                <h3 class="text-xl font-black text-slate-950">Soft Skills</h3>
+                                <p class="text-xs font-semibold text-slate-700">Cara saya bekerja dalam tim.</p>
+                            </div>
+                        </div>
+                        <div class="grid gap-3">
+                            <?php foreach($profile['soft_skills'] as $skill): ?>
+                                <div class="fade-slide flex items-start gap-3 rounded-2xl border border-white/60 bg-slate-200/55 p-4 shadow-card backdrop-blur-md transition hover:-translate-y-1 hover:bg-slate-200/80">
+                                    <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-slate-700 text-white"><i data-lucide="<?= e($skill['icon']); ?>" class="h-4 w-4"></i></span>
+                                    <div>
+                                        <p class="text-sm font-black text-slate-950"><?= e($skill['name']); ?></p>
+                                        <p class="mt-1 text-xs leading-5 text-slate-700"><?= e($skill['desc']); ?></p>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -639,18 +678,28 @@ $projectFilters = ['All', 'Web Application', 'Web & Mobile Application', 'Mobile
                                     </span>
                                 </div>
                                 <?php if(!empty($images)): ?>
-                                    <a href="<?= e($images[0]['src']); ?>" target="_blank" rel="noopener" class="project-visual overflow-hidden rounded-2xl border border-white/20 bg-slate-100/95 shadow-sm transition hover:bg-slate-50">
-                                        <img src="<?= e($images[0]['src']); ?>" alt="<?= e($images[0]['alt']); ?>" loading="lazy">
-                                    </a>
-                                    <?php if(count($images) > 1): ?>
-                                        <div class="mt-3 grid grid-cols-3 gap-2">
-                                            <?php foreach(array_slice($images, 1, 3) as $image): ?>
-                                                <a href="<?= e($image['src']); ?>" target="_blank" rel="noopener" class="project-thumb overflow-hidden rounded-xl border border-white/20 bg-slate-100/90 transition hover:bg-slate-50">
-                                                    <img src="<?= e($image['src']); ?>" alt="<?= e($image['alt']); ?>" loading="lazy">
+                                    <div class="project-carousel relative" data-carousel>
+                                        <div class="project-visual overflow-hidden rounded-2xl border border-white/20 bg-slate-100/95 shadow-sm">
+                                            <?php foreach($images as $imageIndex => $image): ?>
+                                                <a href="<?= e($image['src']); ?>" target="_blank" rel="noopener" class="carousel-slide <?= $imageIndex === 0 ? '' : 'hidden'; ?> grid h-full w-full place-items-center" data-slide>
+                                                    <img src="<?= e($image['src']); ?>" alt="<?= e($image['alt']); ?>" loading="<?= $imageIndex === 0 ? 'eager' : 'lazy'; ?>">
                                                 </a>
                                             <?php endforeach; ?>
                                         </div>
-                                    <?php endif; ?>
+                                        <?php if(count($images) > 1): ?>
+                                            <button type="button" class="carousel-prev absolute left-3 top-1/2 grid h-9 w-9 -translate-y-1/2 place-items-center rounded-full bg-slate-950/70 text-white shadow-lg transition hover:bg-slate-950" aria-label="Gambar sebelumnya">
+                                                <i data-lucide="chevron-left" class="h-5 w-5"></i>
+                                            </button>
+                                            <button type="button" class="carousel-next absolute right-3 top-1/2 grid h-9 w-9 -translate-y-1/2 place-items-center rounded-full bg-slate-950/70 text-white shadow-lg transition hover:bg-slate-950" aria-label="Gambar berikutnya">
+                                                <i data-lucide="chevron-right" class="h-5 w-5"></i>
+                                            </button>
+                                            <div class="absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-1.5 rounded-full bg-slate-950/55 px-2.5 py-1.5" aria-label="Indikator gambar">
+                                                <?php foreach($images as $imageIndex => $image): ?>
+                                                    <button type="button" class="carousel-dot h-1.5 w-1.5 rounded-full bg-white/45 transition data-[active=true]:bg-white" data-dot="<?= $imageIndex; ?>" data-active="<?= $imageIndex === 0 ? 'true' : 'false'; ?>" aria-label="Tampilkan gambar <?= $imageIndex + 1; ?>"></button>
+                                                <?php endforeach; ?>
+                                            </div>
+                                        <?php endif; ?>
+                                    </div>
                                 <?php else: ?>
                                     <div class="rounded-2xl bg-white/14 p-4 ring-1 ring-white/20">
                                         <div class="mb-3 flex items-center gap-2">
@@ -875,6 +924,26 @@ $projectFilters = ['All', 'Web Application', 'Web & Mobile Application', 'Mobile
                     card.classList.toggle('is-hidden', !matches);
                 });
             });
+        });
+
+        document.querySelectorAll('[data-carousel]').forEach((carousel) => {
+            const slides = Array.from(carousel.querySelectorAll('[data-slide]'));
+            const dots = Array.from(carousel.querySelectorAll('[data-dot]'));
+            const previous = carousel.querySelector('.carousel-prev');
+            const next = carousel.querySelector('.carousel-next');
+            let activeIndex = 0;
+
+            if (slides.length < 2) return;
+
+            function showSlide(index) {
+                activeIndex = (index + slides.length) % slides.length;
+                slides.forEach((slide, slideIndex) => slide.classList.toggle('hidden', slideIndex !== activeIndex));
+                dots.forEach((dot, dotIndex) => dot.dataset.active = String(dotIndex === activeIndex));
+            }
+
+            previous.addEventListener('click', () => showSlide(activeIndex - 1));
+            next.addEventListener('click', () => showSlide(activeIndex + 1));
+            dots.forEach((dot) => dot.addEventListener('click', () => showSlide(Number(dot.dataset.dot))));
         });
 
         function sendToWhatsapp(e) {
