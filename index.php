@@ -1,36 +1,37 @@
 <?php
 $profile = [
     'name' => 'Suhatta',
-    'role' => 'Full Stack Web Developer',
-    'eyebrow' => 'Mahasiswa D4 Sistem Informasi Bisnis',
-    'tagline' => 'Membangun website, aplikasi mobile, dan PWA yang efisien, responsif, dan mudah digunakan.',
-    'bio' => 'Saya mahasiswa Teknologi Informasi di Politeknik Negeri Malang dengan minat kuat pada pengembangan perangkat lunak, terutama Laravel, Flutter, PHP, API, dan Front End Language.',
+    'role' => 'Junior Software Engineer · Laravel & Flutter Specialist',
+    'eyebrow' => 'Sarjana Terapan Sistem Informasi Bisnis · Politeknik Negeri Malang',
+    'tagline' => 'Mengembangkan aplikasi web, mobile, dan PWA yang terstruktur, responsif, dan terintegrasi REST API.',
+    'bio' => 'Fresh graduate D4 Sistem Informasi Bisnis (Polinema) dengan pengalaman mengembangkan 10+ aplikasi web dan mobile. Berfokus pada Laravel, Flutter, JavaScript, REST API, dan integrasi database untuk kebutuhan digital yang nyata.',
     'location' => 'Indonesia',
     'email' => 'suhatta26@gmail.com',
     'phone' => '0858 1570 7390',
     'phone_raw' => '085815707390',
     'whatsapp' => 'https://wa.me/6285815707390',
+    'resume' => 'assets/Suhatta-CV.pdf',
 'stats' => [
-        ['value' => '10', 'label' => 'Project portofolio', 'icon' => 'folder-kanban', 'color' => 'text-slate-900', 'bg' => 'bg-slate-200/80'],
-        ['value' => '11', 'label' => 'Skill teknis', 'icon' => 'badge-check', 'color' => 'text-slate-800', 'bg' => 'bg-slate-200/80'],
+        ['value' => '10+', 'label' => 'Project web & mobile', 'icon' => 'folder-kanban', 'color' => 'text-slate-900', 'bg' => 'bg-slate-200/80'],
+        ['value' => '5', 'label' => 'Ekosistem teknologi', 'icon' => 'layers-3', 'color' => 'text-slate-800', 'bg' => 'bg-slate-200/80'],
         ['value' => '2026', 'label' => 'Portofolio terbaru', 'icon' => 'sparkles', 'color' => 'text-slate-900', 'bg' => 'bg-slate-300/80']
     ],
     'education' => [
-        ['school' => 'Politeknik Negeri Malang', 'period' => '2022 - Sekarang', 'major' => 'D4 Sistem Informasi Bisnis'],
+        ['school' => 'Politeknik Negeri Malang', 'period' => '2022 - 2026', 'major' => 'Sarjana Terapan Sistem Informasi Bisnis · IPK 3.51/4.00'],
         ['school' => 'SMA Negeri 1 Sutojayan', 'period' => '2019 - 2022', 'major' => 'Jurusan Ilmu Pengetahuan Sosial']
     ],
     'skills' => [
-        ['name' => 'Java', 'icon' => 'coffee', 'cat' => 'Language'],
-        ['name' => 'PHP', 'icon' => 'braces', 'cat' => 'Backend'],
-        ['name' => 'JavaScript', 'icon' => 'code-2', 'cat' => 'Frontend'],
-        ['name' => 'Laravel', 'icon' => 'layers-3', 'cat' => 'Framework'],
-        ['name' => 'Flutter', 'icon' => 'smartphone', 'cat' => 'Mobile'],
-        ['name' => 'Bootstrap', 'icon' => 'layout-template', 'cat' => 'Styling'],
-        ['name' => 'CSS', 'icon' => 'palette', 'cat' => 'Styling'],
-        ['name' => 'HTML', 'icon' => 'file-code-2', 'cat' => 'Markup'],
-        ['name' => 'API', 'icon' => 'plug-zap', 'cat' => 'Integration'],
-        ['name' => 'Postman', 'icon' => 'send', 'cat' => 'Testing'],
-        ['name' => 'MySQL', 'icon' => 'database', 'cat' => 'Database']
+        ['name' => 'JavaScript (ES6+)', 'icon' => 'code-2', 'cat' => 'Languages'],
+        ['name' => 'PHP', 'icon' => 'braces', 'cat' => 'Languages'],
+        ['name' => 'Dart', 'icon' => 'code-2', 'cat' => 'Languages'],
+        ['name' => 'Laravel', 'icon' => 'layers-3', 'cat' => 'Frameworks'],
+        ['name' => 'Flutter', 'icon' => 'smartphone', 'cat' => 'Frameworks'],
+        ['name' => 'React & TypeScript', 'icon' => 'component', 'cat' => 'Frontend'],
+        ['name' => 'HTML & CSS', 'icon' => 'file-code-2', 'cat' => 'Frontend'],
+        ['name' => 'REST API', 'icon' => 'plug-zap', 'cat' => 'Integration'],
+        ['name' => 'MySQL', 'icon' => 'database', 'cat' => 'Database'],
+        ['name' => 'Git & GitHub', 'icon' => 'git-branch', 'cat' => 'Workflow'],
+        ['name' => 'Postman', 'icon' => 'send', 'cat' => 'Tools']
     ],
 'projects' => [
         [
@@ -90,8 +91,8 @@ $profile = [
             'type' => 'Progressive Web App',
             'role' => 'Full Stack Developer',
             'desc' => 'PWA & Website bisnis operasional depo air minum, mencakup pengelolaan pelanggan, transaksi, pemesanan air, monitoring stok, dan laporan penjualan real-time.',
-            'contribution' => 'Mengembangkan PWA dan website bisnis menggunakan PHP Native dan JSON agar ringan, responsif, dan praktis digunakan di mobile maupun desktop.',
-            'stack' => ['PWA', 'PHP Native', 'JSON', 'Water Business'],
+            'contribution' => 'Mengembangkan aplikasi operasional depo dengan autentikasi, manajemen cabang, transaksi, laporan, monitoring performa, serta integrasi REST API.',
+            'stack' => ['PWA', 'Flutter', 'Laravel', 'Dio', 'GetX', 'MySQL'],
             'icon' => 'glass-water',
             'accent' => 'cyan',
             'images' => [
@@ -101,6 +102,17 @@ $profile = [
                 ['src' => 'assets/projects/mydepo-crew.png', 'alt' => 'Dashboard crew Depo Fluks / My Depo']
             ],
             'link' => 'https://depo.flukswater.com/'
+        ],
+        [
+            'title' => 'Frozeria',
+            'type' => 'Web Application',
+            'role' => 'Web Developer',
+            'desc' => 'Aplikasi web Laravel untuk mengelola barang dan kategori melalui dashboard yang terstruktur dan mudah dikembangkan.',
+            'contribution' => 'Menerapkan pola MVC, operasi CRUD, autentikasi Laravel Sanctum, integrasi Guzzle, serta asset build menggunakan Vite.',
+            'stack' => ['Laravel 10', 'Sanctum', 'Blade', 'Guzzle', 'Vite'],
+            'icon' => 'package-check',
+            'accent' => 'violet',
+            'link' => ''
         ],
         [
             'title' => 'Solusie',
@@ -213,7 +225,7 @@ function projectAccent($accent) {
     return $accents[$accent] ?? $accents['sky'];
 }
 
-$projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive Web App', 'Company Profile'];
+$projectFilters = ['All', 'Web Application', 'Web & Mobile Application', 'Mobile Application', 'Progressive Web App', 'Company Profile'];
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -386,6 +398,10 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
                         <a href="#contact" class="nav-tab rounded-xl px-4 py-2 transition hover:bg-slate-300/60 hover:text-slate-950 data-[active=true]:bg-slate-900 data-[active=true]:text-white" data-tab="contact" data-active="false">Kontak</a>
                     </nav>
 
+                    <a href="<?= e($profile['resume']); ?>" download class="hidden rounded-xl border border-slate-400/70 bg-slate-100/70 px-4 py-2.5 text-sm font-bold text-slate-900 shadow-sm transition hover:-translate-y-0.5 hover:bg-white sm:inline-flex items-center gap-2">
+                        <i data-lucide="download" class="h-4 w-4"></i>
+                        Download CV
+                    </a>
                     <a href="<?= e($profile['whatsapp']); ?>" target="_blank" rel="noopener" class="hidden rounded-xl bg-slate-900 px-5 py-2.5 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-slate-800 sm:inline-flex items-center gap-2">
                         <i data-lucide="message-square" class="h-4 w-4"></i>
                         Hubungi
@@ -428,6 +444,7 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
                         Portofolio <span class="name-text"><?= e($profile['name']); ?></span>.
                     </h1>
                     <p class="mt-5 max-w-2xl text-xl font-bold text-slate-900"><?= e($profile['role']); ?></p>
+                    <p class="mt-2 text-sm font-semibold text-slate-700"><?= e($profile['eyebrow']); ?> · Magang Inatech Software House 2025</p>
                     <p class="mt-4 max-w-2xl text-base leading-7 text-slate-800 sm:text-lg"><?= e($profile['tagline']); ?></p>
 
                     <div class="mt-8 flex flex-wrap gap-3">
@@ -439,17 +456,21 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
                             <i data-lucide="message-square" class="h-5 w-5"></i>
                             Chat WhatsApp Direct
                         </a>
+                        <a href="<?= e($profile['resume']); ?>" download class="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-400/70 bg-white/60 px-5 py-3.5 text-sm font-bold text-slate-900 transition hover:-translate-y-0.5 hover:bg-white">
+                            <i data-lucide="file-down" class="h-5 w-5"></i>
+                            Download CV (PDF)
+                        </a>
                     </div>
 
                     <!-- Quick Skill Pills & Stats Grid -->
                     <div class="mt-8 pt-6 border-t border-white/40">
                         <p class="text-xs font-black uppercase tracking-wider text-slate-700">Keahlian Utama:</p>
                         <div class="mt-3 flex flex-wrap gap-2">
-                            <span class="rounded-lg border border-white/60 bg-slate-200/50 px-3 py-1 text-xs font-bold text-slate-900 backdrop-blur">Laravel Framework</span>
-                            <span class="rounded-lg border border-white/60 bg-slate-200/50 px-3 py-1 text-xs font-bold text-slate-900 backdrop-blur">Flutter Mobile App</span>
-                            <span class="rounded-lg border border-white/60 bg-slate-200/50 px-3 py-1 text-xs font-bold text-slate-900 backdrop-blur">PWA Development</span>
-                            <span class="rounded-lg border border-white/60 bg-slate-200/50 px-3 py-1 text-xs font-bold text-slate-900 backdrop-blur">PHP & MySQL</span>
-                            <span class="rounded-lg border border-white/60 bg-slate-200/50 px-3 py-1 text-xs font-bold text-slate-900 backdrop-blur">REST API Integration</span>
+                            <span class="rounded-lg border border-white/60 bg-slate-200/50 px-3 py-1 text-xs font-bold text-slate-900 backdrop-blur">Laravel & PHP</span>
+                            <span class="rounded-lg border border-white/60 bg-slate-200/50 px-3 py-1 text-xs font-bold text-slate-900 backdrop-blur">Flutter & Dart</span>
+                            <span class="rounded-lg border border-white/60 bg-slate-200/50 px-3 py-1 text-xs font-bold text-slate-900 backdrop-blur">JavaScript & TypeScript</span>
+                            <span class="rounded-lg border border-white/60 bg-slate-200/50 px-3 py-1 text-xs font-bold text-slate-900 backdrop-blur">React & Tailwind</span>
+                            <span class="rounded-lg border border-white/60 bg-slate-200/50 px-3 py-1 text-xs font-bold text-slate-900 backdrop-blur">REST API & MySQL</span>
                         </div>
                     </div>
 
@@ -511,17 +532,17 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
                                 <span class="h-2 w-2 rounded-full bg-slate-700"></span>
                                 Profile & Experience
                             </div>
-                            <h2 class="mt-4 text-3xl font-black leading-tight text-slate-950 sm:text-4xl">Fokus pada Solusi Digital yang Efisien & Inovatif.</h2>
-                            <p class="mt-3 text-base leading-relaxed text-slate-800 sm:text-lg">Pengalaman membangun ekosistem digital kampus, aplikasi mobile koperasi, absensi PWA, company profile berteknologi modern, dan perapihan antarmuka pengguna (UI/UX).</p>
+                            <h2 class="mt-4 text-3xl font-black leading-tight text-slate-950 sm:text-4xl">Membangun produk digital dari API sampai antarmuka.</h2>
+                            <p class="mt-3 text-base leading-relaxed text-slate-800 sm:text-lg">Lulusan D4 Sistem Informasi Bisnis dengan pengalaman magang dan 10+ project web/mobile. Terbiasa mengembangkan fitur, merancang database, mengintegrasikan REST API, melakukan testing, dan berkolaborasi menggunakan Git.</p>
                         </div>
                         <div class="grid grid-cols-2 gap-4 lg:w-72 shrink-0">
                             <div class="rounded-2xl border border-white/60 bg-slate-300/50 p-4 text-center backdrop-blur">
-                                <p class="text-3xl font-black text-slate-950">4+</p>
-                                <p class="mt-1 text-xs font-bold uppercase tracking-wider text-slate-700">Tahun Pengalaman</p>
+                                <p class="text-3xl font-black text-slate-950">1 th</p>
+                                <p class="mt-1 text-xs font-bold uppercase tracking-wider text-slate-700">Pengalaman magang</p>
                             </div>
                             <div class="rounded-2xl border border-white/60 bg-slate-300/50 p-4 text-center backdrop-blur">
-                                <p class="text-3xl font-black text-slate-950">100%</p>
-                                <p class="mt-1 text-xs font-bold uppercase tracking-wider text-slate-700">Dedikasi Performa</p>
+                                <p class="text-3xl font-black text-slate-950">3.51</p>
+                                <p class="mt-1 text-xs font-bold uppercase tracking-wider text-slate-700">IPK / 4.00</p>
                             </div>
                         </div>
                     </div>
@@ -552,7 +573,7 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
                         <p class="text-sm font-black uppercase tracking-[.2em] text-slate-700">Personal Skill Matrix</p>
                         <h2 class="mt-3 text-3xl font-black text-slate-950 sm:text-4xl">Tech Stack & Tools Portfolio.</h2>
                     </div>
-                    <p class="max-w-md text-slate-800">Skill teknis yang digunakan secara aktif untuk membangun frontend, backend, aplikasi mobile Flutter, integrasi REST API, dan database.</p>
+                    <p class="max-w-md text-slate-800">Tools dan teknologi yang pernah digunakan dalam project akademik, magang, dan aplikasi yang sudah berjalan.</p>
                 </div>
 
                 <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
@@ -565,13 +586,7 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
                                 <span class="rounded-full bg-slate-300/70 border border-white/60 px-3 py-1 text-[11px] font-bold text-slate-900"><?= e($skill['cat']); ?></span>
                             </div>
                             <p class="mt-4 text-lg font-black text-slate-950"><?= e($skill['name']); ?></p>
-                            <!-- Visual Progress Bar -->
-                            <div class="mt-3 flex items-center gap-2">
-                                <div class="h-2 w-full overflow-hidden rounded-full bg-slate-300/80">
-                                    <div class="h-full rounded-full bg-slate-900" style="width: <?= rand(85, 96); ?>%;"></div>
-                                </div>
-                                <span class="text-xs font-bold text-slate-700">Advanced</span>
-                            </div>
+                            <p class="mt-3 text-xs leading-5 text-slate-700">Digunakan pada project web, mobile, dan integrasi sistem.</p>
                         </div>
                     <?php endforeach; ?>
                 </div>
@@ -584,9 +599,12 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
                     <div>
                         <p class="text-sm font-black uppercase tracking-[.2em] text-slate-700">Pencapaian Project</p>
                         <h2 class="mt-3 text-3xl font-black text-slate-950 sm:text-4xl">Project lengkap dari portofolio.</h2>
-                        <p class="mt-2 max-w-2xl text-slate-800">Daftar ini menggabungkan project dari PDF dan project live yang sudah ada di website.</p>
+                        <p class="mt-2 max-w-2xl text-slate-800">Studi kasus singkat dari project akademik dan pengalaman magang, dengan fokus pada kontribusi teknis yang saya kerjakan.</p>
                     </div>
-                    <div class="flex flex-wrap gap-2" aria-label="Filter project">
+                    <div class="flex flex-wrap items-center gap-2" aria-label="Filter project dan profil">
+                        <a href="<?= e($profile['socials'][0]['link']); ?>" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-4 py-2 text-sm font-black text-white transition hover:bg-slate-800">
+                            <i data-lucide="github" class="h-4 w-4"></i> GitHub Profile
+                        </a>
                         <?php foreach($projectFilters as $filter): ?>
                             <button type="button" class="filter-btn rounded-xl border border-white/60 bg-slate-200/50 px-4 py-2 text-sm font-black text-slate-800 transition hover:bg-slate-300/60 data-[active=true]:bg-slate-900 data-[active=true]:text-white" data-filter="<?= e($filter); ?>" data-active="<?= $filter === 'All' ? 'true' : 'false'; ?>">
                                 <?= e($filter); ?>
@@ -651,10 +669,14 @@ $projectFilters = ['All', 'Web Application', 'Mobile Application', 'Progressive 
                                     <?php endforeach; ?>
                                 </div>
                                 <?php if($isLive): ?>
-                                    <a href="<?= e($project['link']); ?>" target="_blank" rel="noopener" class="mt-6 inline-flex items-center gap-2 text-sm font-black text-slate-950 hover:text-black hover:underline">
-                                        Lihat web live
-                                        <i data-lucide="external-link" class="h-4 w-4"></i>
-                                    </a>
+                                    <div class="mt-6 flex flex-wrap gap-2">
+                                        <a href="<?= e($project['link']); ?>" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-4 py-2.5 text-sm font-black text-white transition hover:bg-slate-800">
+                                            <?= str_contains($project['link'], 'github.com') ? 'Lihat Repo GitHub' : 'Lihat Web Live'; ?>
+                                            <i data-lucide="external-link" class="h-4 w-4"></i>
+                                        </a>
+                                    </div>
+                                <?php else: ?>
+                                    <p class="mt-6 inline-flex items-center gap-2 text-xs font-semibold text-slate-600"><i data-lucide="lock-keyhole" class="h-4 w-4"></i> Detail repo belum dipublikasikan</p>
                                 <?php endif; ?>
                             </div>
                         </article>
