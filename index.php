@@ -346,14 +346,18 @@ $projectFilters = ['All', 'Web Application', 'Web & Mobile Application', 'Mobile
             display: none;
         }
         .project-visual {
-            height: clamp(360px, 58vw, 460px);
+            aspect-ratio: 16 / 10;
+            width: 100%;
+            padding: clamp(.55rem, 1.5vw, .9rem);
             display: grid;
             place-items: center;
+            background: linear-gradient(145deg, rgba(241, 245, 249, .98), rgba(226, 232, 240, .92));
         }
         .project-visual img {
-            max-height: 100%;
-            max-width: 100%;
+            width: 100%;
+            height: 100%;
             object-fit: contain;
+            object-position: center center;
         }
         .project-thumb {
             height: 94px;
@@ -367,7 +371,7 @@ $projectFilters = ['All', 'Web Application', 'Web & Mobile Application', 'Mobile
         }
         @media (min-width: 768px) {
             .project-visual {
-                height: 420px;
+                aspect-ratio: 16 / 10;
             }
             .project-thumb {
                 height: 118px;
@@ -375,7 +379,7 @@ $projectFilters = ['All', 'Web Application', 'Web & Mobile Application', 'Mobile
         }
         @media (min-width: 1280px) {
             .project-visual {
-                height: 440px;
+                aspect-ratio: 16 / 10;
             }
         }
         @media (prefers-reduced-motion: reduce) {
