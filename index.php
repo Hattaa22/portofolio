@@ -11,6 +11,7 @@ $profile = [
     'phone_raw' => '085815707390',
     'whatsapp' => 'https://wa.me/6285815707390',
     'resume' => 'assets/Suhatta-CV.pdf',
+    'profile_image' => 'assets/profile.jpg',
 'stats' => [
         ['value' => '10+', 'label' => 'Project web & mobile', 'icon' => 'folder-kanban', 'color' => 'text-slate-900', 'bg' => 'bg-slate-200/80'],
         ['value' => '5', 'label' => 'Ekosistem teknologi', 'icon' => 'layers-3', 'color' => 'text-slate-800', 'bg' => 'bg-slate-200/80'],
@@ -503,7 +504,10 @@ $projectFilters = ['All', 'Web Application', 'Web & Mobile Application', 'Mobile
                                         <i data-lucide="code-2" class="h-7 w-7"></i>
                                     </div>
                                 </div>
-                                <p class="mt-5 text-sm leading-6 text-slate-800"><?= e($profile['bio']); ?></p>
+                                <div class="mt-5 grid grid-cols-[6.5rem_1fr] items-start gap-4 sm:grid-cols-[7.5rem_1fr]">
+                                    <img src="<?= e($profile['profile_image']); ?>" alt="Suhatta - Junior Software Engineer" class="aspect-[4/5] w-full rounded-2xl border border-white/70 bg-slate-200 object-cover object-[50%_25%] shadow-card" loading="eager" width="240" height="300">
+                                    <p class="text-sm leading-6 text-slate-800"><?= e($profile['bio']); ?></p>
+                                </div>
                             </div>
 
                             <div class="mt-4 grid gap-4 sm:grid-cols-2">
