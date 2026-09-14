@@ -22,17 +22,17 @@ $profile = [
         ['school' => 'SMA Negeri 1 Sutojayan', 'period' => '2019 - 2022', 'major' => 'Jurusan Ilmu Pengetahuan Sosial']
     ],
     'skills' => [
-        ['name' => 'JavaScript (ES6+)', 'icon' => 'code-2', 'cat' => 'Languages'],
-        ['name' => 'PHP', 'icon' => 'braces', 'cat' => 'Languages'],
-        ['name' => 'Dart', 'icon' => 'code-2', 'cat' => 'Languages'],
-        ['name' => 'Laravel', 'icon' => 'layers-3', 'cat' => 'Frameworks'],
-        ['name' => 'Flutter', 'icon' => 'smartphone', 'cat' => 'Frameworks'],
-        ['name' => 'React & TypeScript', 'icon' => 'component', 'cat' => 'Frontend'],
-        ['name' => 'HTML & CSS', 'icon' => 'file-code-2', 'cat' => 'Frontend'],
-        ['name' => 'REST API', 'icon' => 'plug-zap', 'cat' => 'Integration'],
-        ['name' => 'MySQL', 'icon' => 'database', 'cat' => 'Database'],
-        ['name' => 'Git & GitHub', 'icon' => 'git-branch', 'cat' => 'Workflow'],
-        ['name' => 'Postman', 'icon' => 'send', 'cat' => 'Tools']
+        ['name' => 'JavaScript (ES6+)', 'icon' => 'code-2', 'cat' => 'Languages', 'desc' => 'Logika antarmuka dinamis, asynchronous flow, dan interaksi PWA.'],
+        ['name' => 'PHP', 'icon' => 'braces', 'cat' => 'Languages', 'desc' => 'Pengembangan sisi server, validasi data, dan integrasi database.'],
+        ['name' => 'Dart', 'icon' => 'code-2', 'cat' => 'Languages', 'desc' => 'Bahasa utama untuk membangun aplikasi Flutter lintas platform.'],
+        ['name' => 'Laravel', 'icon' => 'layers-3', 'cat' => 'Frameworks', 'desc' => 'MVC, Eloquent ORM, autentikasi, dashboard, dan RESTful API.'],
+        ['name' => 'Flutter', 'icon' => 'smartphone', 'cat' => 'Frameworks', 'desc' => 'Antarmuka mobile responsif, state management, dan integrasi API.'],
+        ['name' => 'React & TypeScript', 'icon' => 'component', 'cat' => 'Frontend', 'desc' => 'Komponen UI modular dengan struktur type-safe untuk web modern.'],
+        ['name' => 'HTML & CSS', 'icon' => 'file-code-2', 'cat' => 'Frontend', 'desc' => 'Layout responsif, aksesibilitas dasar, dan visual hierarchy.'],
+        ['name' => 'REST API', 'icon' => 'plug-zap', 'cat' => 'Integration', 'desc' => 'Pertukaran data web-mobile menggunakan JSON, Dio, dan endpoint terstruktur.'],
+        ['name' => 'MySQL', 'icon' => 'database', 'cat' => 'Database', 'desc' => 'Perancangan tabel relasional, query, dan pengelolaan data aplikasi.'],
+        ['name' => 'Git & GitHub', 'icon' => 'git-branch', 'cat' => 'Workflow', 'desc' => 'Version control, kolaborasi branch, commit, dan deployment repository.'],
+        ['name' => 'Postman', 'icon' => 'send', 'cat' => 'Tools', 'desc' => 'Pengujian endpoint, autentikasi, payload, dan response API.']
     ],
 'projects' => [
         [
@@ -234,7 +234,7 @@ $projectFilters = ['All', 'Web Application', 'Web & Mobile Application', 'Mobile
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= e($profile['name']); ?> - <?= e($profile['role']); ?> Portofolio</title>
-    <meta name="description" content="Portofolio <?= e($profile['name']); ?>, Full Stack Web Developer. Project Laravel, Flutter, PWA, PHP, API, dan UI redesign.">
+    <meta name="description" content="Portofolio <?= e($profile['name']); ?>, Junior Software Engineer dengan fokus Laravel, Flutter, JavaScript, REST API, PWA, dan pengembangan web-mobile.">
     <meta name="keywords" content="Suhatta, Full Stack Developer, Web Developer Indonesia, Laravel, PHP, JavaScript, Flutter, PWA">
     <meta name="author" content="<?= e($profile['name']); ?>">
     <meta property="og:title" content="<?= e($profile['name']); ?> - <?= e($profile['role']); ?>">
@@ -506,7 +506,15 @@ $projectFilters = ['All', 'Web Application', 'Web & Mobile Application', 'Mobile
                                 </div>
                                 <div class="mt-5 grid grid-cols-[6.5rem_1fr] items-start gap-4 sm:grid-cols-[7.5rem_1fr]">
                                     <img src="<?= e($profile['profile_image']); ?>" alt="Suhatta - Junior Software Engineer" class="aspect-[4/5] w-full rounded-2xl border border-white/70 bg-slate-200 object-cover object-[50%_25%] shadow-card" loading="eager" width="240" height="300">
-                                    <p class="text-sm leading-6 text-slate-800"><?= e($profile['bio']); ?></p>
+                                    <div>
+                                        <p class="text-[10px] font-black uppercase tracking-[.18em] text-slate-600">Profile Snapshot</p>
+                                        <p class="mt-2 text-sm leading-6 text-slate-800"><?= e($profile['bio']); ?></p>
+                                        <div class="mt-3 flex flex-wrap gap-1.5" aria-label="Fokus pengembangan">
+                                            <span class="rounded-full bg-slate-200/80 px-2.5 py-1 text-[10px] font-black text-slate-800">Web</span>
+                                            <span class="rounded-full bg-slate-200/80 px-2.5 py-1 text-[10px] font-black text-slate-800">Mobile</span>
+                                            <span class="rounded-full bg-slate-200/80 px-2.5 py-1 text-[10px] font-black text-slate-800">REST API</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -590,7 +598,7 @@ $projectFilters = ['All', 'Web Application', 'Web & Mobile Application', 'Mobile
                                 <span class="rounded-full bg-slate-300/70 border border-white/60 px-3 py-1 text-[11px] font-bold text-slate-900"><?= e($skill['cat']); ?></span>
                             </div>
                             <p class="mt-4 text-lg font-black text-slate-950"><?= e($skill['name']); ?></p>
-                            <p class="mt-3 text-xs leading-5 text-slate-700">Digunakan pada project web, mobile, dan integrasi sistem.</p>
+                            <p class="mt-3 text-xs leading-5 text-slate-700"><?= e($skill['desc']); ?></p>
                         </div>
                     <?php endforeach; ?>
                 </div>
@@ -680,7 +688,7 @@ $projectFilters = ['All', 'Web Application', 'Web & Mobile Application', 'Mobile
                                         </a>
                                     </div>
                                 <?php else: ?>
-                                    <p class="mt-6 inline-flex items-center gap-2 text-xs font-semibold text-slate-600"><i data-lucide="lock-keyhole" class="h-4 w-4"></i> Detail repo belum dipublikasikan</p>
+                                    <p class="mt-6 inline-flex items-center gap-2 text-xs font-semibold text-slate-600"><i data-lucide="lock-keyhole" class="h-4 w-4"></i> Repo belum tersedia untuk publik</p>
                                 <?php endif; ?>
                             </div>
                         </article>
